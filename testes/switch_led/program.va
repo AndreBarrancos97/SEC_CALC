@@ -1,0 +1,8 @@
+    ldi 1
+    wrw LED0_BASE
+    ldi 0
+    ldi 0x35
+    wrw 0x7fff
+    ldi 0
+end beqi end
+    nop
