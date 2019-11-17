@@ -1,0 +1,814 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 4 -n
+3 -fastpaths -xml xtop.twx xtop.ncd -o xtop.twr xtop.pcf -ucf xtop.ucf
+
+Design file:              xtop.ncd
+Physical constraint file: xtop.pcf
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clkin = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 6003124 paths analyzed, 540 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  19.920ns.
+--------------------------------------------------------------------------------
+
+Paths for end point controller/regA_24 (SLICE_X17Y33.F1), 293875 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.080ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.920ns (Levels of Logic = 19)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y11.G4      net (fanout=5)        0.143   controller/mem_sel120
+    SLICE_X12Y11.Y       Tilo                  0.759   controller/operand<1>13
+                                                       controller/mem_sel
+    SLICE_X12Y6.F3       net (fanout=34)       0.655   data_sel
+    SLICE_X12Y6.X        Tilo                  0.759   controller/operand<5>9
+                                                       controller/operand<5>9
+    SLICE_X15Y13.G4      net (fanout=2)        1.148   controller/operand<5>9
+    SLICE_X15Y13.COUT    Topcyg                1.001   controller/carry_res_n_1<4>
+                                                       controller/Maddsub_carry_res_n_1_lut<5>
+                                                       controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.COUT    Tbyp                  0.118   controller/carry_res_n_1<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.COUT    Tbyp                  0.118   controller/carry_res_n_1<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.COUT    Tbyp                  0.118   controller/carry_res_n_1<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.COUT    Tbyp                  0.118   controller/carry_res_n_1<12>
+                                                       controller/Maddsub_carry_res_n_1_cy<12>
+                                                       controller/Maddsub_carry_res_n_1_cy<13>
+    SLICE_X15Y18.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<13>
+    SLICE_X15Y18.COUT    Tbyp                  0.118   controller/carry_res_n_1<14>
+                                                       controller/Maddsub_carry_res_n_1_cy<14>
+                                                       controller/Maddsub_carry_res_n_1_cy<15>
+    SLICE_X15Y19.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<15>
+    SLICE_X15Y19.X       Tcinx                 0.462   controller/carry_res_n_1<16>
+                                                       controller/Maddsub_carry_res_n_1_xor<16>
+    SLICE_X17Y20.F1      net (fanout=1)        0.772   controller/carry_res_n_1<16>
+    SLICE_X17Y20.COUT    Topcyf                1.162   controller/adder_res<16>
+                                                       controller/Maddsub_adder_res_lut<16>
+                                                       controller/Maddsub_adder_res_cy<16>
+                                                       controller/Maddsub_adder_res_cy<17>
+    SLICE_X17Y21.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<17>
+    SLICE_X17Y21.COUT    Tbyp                  0.118   controller/adder_res<18>
+                                                       controller/Maddsub_adder_res_cy<18>
+                                                       controller/Maddsub_adder_res_cy<19>
+    SLICE_X17Y22.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<19>
+    SLICE_X17Y22.COUT    Tbyp                  0.118   controller/adder_res<20>
+                                                       controller/Maddsub_adder_res_cy<20>
+                                                       controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.COUT    Tbyp                  0.118   controller/adder_res<22>
+                                                       controller/Maddsub_adder_res_cy<22>
+                                                       controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.X       Tcinx                 0.462   controller/adder_res<24>
+                                                       controller/Maddsub_adder_res_xor<24>
+    SLICE_X17Y33.F1      net (fanout=1)        1.163   controller/adder_res<24>
+    SLICE_X17Y33.CLK     Tfck                  0.837   controller/regA<24>
+                                                       controller/Mmux_regA_mux000051147
+                                                       controller/regA_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.920ns (12.572ns logic, 7.348ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.080ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.920ns (Levels of Logic = 19)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y11.G4      net (fanout=5)        0.143   controller/mem_sel120
+    SLICE_X12Y11.Y       Tilo                  0.759   controller/operand<1>13
+                                                       controller/mem_sel
+    SLICE_X12Y6.F3       net (fanout=34)       0.655   data_sel
+    SLICE_X12Y6.X        Tilo                  0.759   controller/operand<5>9
+                                                       controller/operand<5>9
+    SLICE_X15Y13.G4      net (fanout=2)        1.148   controller/operand<5>9
+    SLICE_X15Y13.COUT    Topcyg                1.001   controller/carry_res_n_1<4>
+                                                       controller/Maddsub_carry_res_n_1_lut<5>
+                                                       controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.COUT    Tbyp                  0.118   controller/carry_res_n_1<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.COUT    Tbyp                  0.118   controller/carry_res_n_1<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.COUT    Tbyp                  0.118   controller/carry_res_n_1<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.COUT    Tbyp                  0.118   controller/carry_res_n_1<12>
+                                                       controller/Maddsub_carry_res_n_1_cy<12>
+                                                       controller/Maddsub_carry_res_n_1_cy<13>
+    SLICE_X15Y18.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<13>
+    SLICE_X15Y18.COUT    Tbyp                  0.118   controller/carry_res_n_1<14>
+                                                       controller/Maddsub_carry_res_n_1_cy<14>
+                                                       controller/Maddsub_carry_res_n_1_cy<15>
+    SLICE_X15Y19.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<15>
+    SLICE_X15Y19.COUT    Tbyp                  0.118   controller/carry_res_n_1<16>
+                                                       controller/Maddsub_carry_res_n_1_cy<16>
+                                                       controller/Maddsub_carry_res_n_1_cy<17>
+    SLICE_X15Y20.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<17>
+    SLICE_X15Y20.COUT    Tbyp                  0.118   controller/carry_res_n_1<18>
+                                                       controller/Maddsub_carry_res_n_1_cy<18>
+                                                       controller/Maddsub_carry_res_n_1_cy<19>
+    SLICE_X15Y21.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<19>
+    SLICE_X15Y21.X       Tcinx                 0.462   controller/carry_res_n_1<20>
+                                                       controller/Maddsub_carry_res_n_1_xor<20>
+    SLICE_X17Y22.F1      net (fanout=1)        0.772   controller/carry_res_n_1<20>
+    SLICE_X17Y22.COUT    Topcyf                1.162   controller/adder_res<20>
+                                                       controller/Maddsub_adder_res_lut<20>
+                                                       controller/Maddsub_adder_res_cy<20>
+                                                       controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.COUT    Tbyp                  0.118   controller/adder_res<22>
+                                                       controller/Maddsub_adder_res_cy<22>
+                                                       controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.X       Tcinx                 0.462   controller/adder_res<24>
+                                                       controller/Maddsub_adder_res_xor<24>
+    SLICE_X17Y33.F1      net (fanout=1)        1.163   controller/adder_res<24>
+    SLICE_X17Y33.CLK     Tfck                  0.837   controller/regA<24>
+                                                       controller/Mmux_regA_mux000051147
+                                                       controller/regA_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.920ns (12.572ns logic, 7.348ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.080ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_24 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.920ns (Levels of Logic = 19)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_24
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y11.G4      net (fanout=5)        0.143   controller/mem_sel120
+    SLICE_X12Y11.Y       Tilo                  0.759   controller/operand<1>13
+                                                       controller/mem_sel
+    SLICE_X12Y6.F3       net (fanout=34)       0.655   data_sel
+    SLICE_X12Y6.X        Tilo                  0.759   controller/operand<5>9
+                                                       controller/operand<5>9
+    SLICE_X15Y13.G4      net (fanout=2)        1.148   controller/operand<5>9
+    SLICE_X15Y13.COUT    Topcyg                1.001   controller/carry_res_n_1<4>
+                                                       controller/Maddsub_carry_res_n_1_lut<5>
+                                                       controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<5>
+    SLICE_X15Y14.COUT    Tbyp                  0.118   controller/carry_res_n_1<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<6>
+                                                       controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<7>
+    SLICE_X15Y15.COUT    Tbyp                  0.118   controller/carry_res_n_1<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<8>
+                                                       controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<9>
+    SLICE_X15Y16.COUT    Tbyp                  0.118   controller/carry_res_n_1<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<10>
+                                                       controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.CIN     net (fanout=1)        0.000   controller/Maddsub_carry_res_n_1_cy<11>
+    SLICE_X15Y17.X       Tcinx                 0.462   controller/carry_res_n_1<12>
+                                                       controller/Maddsub_carry_res_n_1_xor<12>
+    SLICE_X17Y18.F1      net (fanout=1)        0.772   controller/carry_res_n_1<12>
+    SLICE_X17Y18.COUT    Topcyf                1.162   controller/adder_res<12>
+                                                       controller/Maddsub_adder_res_lut<12>
+                                                       controller/Maddsub_adder_res_cy<12>
+                                                       controller/Maddsub_adder_res_cy<13>
+    SLICE_X17Y19.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<13>
+    SLICE_X17Y19.COUT    Tbyp                  0.118   controller/adder_res<14>
+                                                       controller/Maddsub_adder_res_cy<14>
+                                                       controller/Maddsub_adder_res_cy<15>
+    SLICE_X17Y20.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<15>
+    SLICE_X17Y20.COUT    Tbyp                  0.118   controller/adder_res<16>
+                                                       controller/Maddsub_adder_res_cy<16>
+                                                       controller/Maddsub_adder_res_cy<17>
+    SLICE_X17Y21.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<17>
+    SLICE_X17Y21.COUT    Tbyp                  0.118   controller/adder_res<18>
+                                                       controller/Maddsub_adder_res_cy<18>
+                                                       controller/Maddsub_adder_res_cy<19>
+    SLICE_X17Y22.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<19>
+    SLICE_X17Y22.COUT    Tbyp                  0.118   controller/adder_res<20>
+                                                       controller/Maddsub_adder_res_cy<20>
+                                                       controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<21>
+    SLICE_X17Y23.COUT    Tbyp                  0.118   controller/adder_res<22>
+                                                       controller/Maddsub_adder_res_cy<22>
+                                                       controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.CIN     net (fanout=1)        0.000   controller/Maddsub_adder_res_cy<23>
+    SLICE_X17Y24.X       Tcinx                 0.462   controller/adder_res<24>
+                                                       controller/Maddsub_adder_res_xor<24>
+    SLICE_X17Y33.F1      net (fanout=1)        1.163   controller/adder_res<24>
+    SLICE_X17Y33.CLK     Tfck                  0.837   controller/regA<24>
+                                                       controller/Mmux_regA_mux000051147
+                                                       controller/regA_24
+    -------------------------------------------------  ---------------------------
+    Total                                     19.920ns (12.572ns logic, 7.348ns route)
+                                                       (63.1% logic, 36.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point controller/regA_9 (SLICE_X22Y14.F2), 1312 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.171ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.828ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.035 - 0.036)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X12Y3.G3       net (fanout=9)        0.665   controller/imm_cmp_eq00001
+    SLICE_X12Y3.Y        Tilo                  0.759   controller/mem_addr<2>1
+                                                       controller/mem_addr<2>1_SW0
+    SLICE_X11Y2.G4       net (fanout=2)        0.327   N127
+    SLICE_X11Y2.Y        Tilo                  0.704   led00/led0_and000010
+                                                       controller/mem_addr<2>1
+    SLICE_X16Y10.G3      net (fanout=35)       1.591   data_addr<2>
+    SLICE_X16Y10.Y       Tilo                  0.759   regf/_varindex0000<1>
+                                                       regf/Mram_regf10
+    SLICE_X13Y10.F1      net (fanout=1)        0.734   regf/_varindex0000<9>
+    SLICE_X13Y10.X       Tilo                  0.704   controller/operand<9>9
+                                                       controller/operand<9>9
+    SLICE_X21Y11.G1      net (fanout=2)        1.693   controller/operand<9>9
+    SLICE_X21Y11.Y       Tilo                  0.704   controller/Mmux_regA_mux00009659
+                                                       controller/operand<9>26
+    SLICE_X27Y13.F3      net (fanout=3)        0.658   controller/operand<9>
+    SLICE_X27Y13.X       Tilo                  0.704   controller/Mmux_regA_mux00009635
+                                                       controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.F4      net (fanout=1)        0.614   controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.X       Tilo                  0.704   controller/Mmux_regA_mux00009699
+                                                       controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.G4      net (fanout=2)        1.163   controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.Y       Tilo                  0.704   N205
+                                                       controller/Mmux_regA_mux000096115_SW0
+    SLICE_X22Y14.F2      net (fanout=1)        0.399   N208
+    SLICE_X22Y14.CLK     Tfck                  0.892   controller/regA<9>
+                                                       controller/Mmux_regA_mux000096146
+                                                       controller/regA_9
+    -------------------------------------------------  ---------------------------
+    Total                                     19.828ns (10.150ns logic, 9.678ns route)
+                                                       (51.2% logic, 48.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.248ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.751ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.035 - 0.036)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X6Y2.G4        net (fanout=126)      1.966   instruction<30>
+    SLICE_X6Y2.Y         Tilo                  0.759   N119
+                                                       controller/imm_cmp_eq00001
+    SLICE_X6Y2.F4        net (fanout=43)       0.106   controller/imm_cmp_eq0000
+    SLICE_X6Y2.X         Tilo                  0.759   N119
+                                                       controller/mem_addr<1>1_SW0
+    SLICE_X14Y9.G2       net (fanout=2)        1.119   N119
+    SLICE_X14Y9.Y        Tilo                  0.759   addr_decoder/trap_sel30
+                                                       controller/mem_addr<1>1
+    SLICE_X16Y10.G2      net (fanout=34)       1.039   data_addr<1>
+    SLICE_X16Y10.Y       Tilo                  0.759   regf/_varindex0000<1>
+                                                       regf/Mram_regf10
+    SLICE_X13Y10.F1      net (fanout=1)        0.734   regf/_varindex0000<9>
+    SLICE_X13Y10.X       Tilo                  0.704   controller/operand<9>9
+                                                       controller/operand<9>9
+    SLICE_X21Y11.G1      net (fanout=2)        1.693   controller/operand<9>9
+    SLICE_X21Y11.Y       Tilo                  0.704   controller/Mmux_regA_mux00009659
+                                                       controller/operand<9>26
+    SLICE_X27Y13.F3      net (fanout=3)        0.658   controller/operand<9>
+    SLICE_X27Y13.X       Tilo                  0.704   controller/Mmux_regA_mux00009635
+                                                       controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.F4      net (fanout=1)        0.614   controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.X       Tilo                  0.704   controller/Mmux_regA_mux00009699
+                                                       controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.G4      net (fanout=2)        1.163   controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.Y       Tilo                  0.704   N205
+                                                       controller/Mmux_regA_mux000096115_SW0
+    SLICE_X22Y14.F2      net (fanout=1)        0.399   N208
+    SLICE_X22Y14.CLK     Tfck                  0.892   controller/regA<9>
+                                                       controller/Mmux_regA_mux000096146
+                                                       controller/regA_9
+    -------------------------------------------------  ---------------------------
+    Total                                     19.751ns (10.260ns logic, 9.491ns route)
+                                                       (51.9% logic, 48.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.273ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_9 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.726ns (Levels of Logic = 10)
+  Clock Path Skew:      -0.001ns (0.035 - 0.036)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB29    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G4        net (fanout=112)      1.732   instruction<29>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X12Y3.G3       net (fanout=9)        0.665   controller/imm_cmp_eq00001
+    SLICE_X12Y3.Y        Tilo                  0.759   controller/mem_addr<2>1
+                                                       controller/mem_addr<2>1_SW0
+    SLICE_X11Y2.G4       net (fanout=2)        0.327   N127
+    SLICE_X11Y2.Y        Tilo                  0.704   led00/led0_and000010
+                                                       controller/mem_addr<2>1
+    SLICE_X16Y10.G3      net (fanout=35)       1.591   data_addr<2>
+    SLICE_X16Y10.Y       Tilo                  0.759   regf/_varindex0000<1>
+                                                       regf/Mram_regf10
+    SLICE_X13Y10.F1      net (fanout=1)        0.734   regf/_varindex0000<9>
+    SLICE_X13Y10.X       Tilo                  0.704   controller/operand<9>9
+                                                       controller/operand<9>9
+    SLICE_X21Y11.G1      net (fanout=2)        1.693   controller/operand<9>9
+    SLICE_X21Y11.Y       Tilo                  0.704   controller/Mmux_regA_mux00009659
+                                                       controller/operand<9>26
+    SLICE_X27Y13.F3      net (fanout=3)        0.658   controller/operand<9>
+    SLICE_X27Y13.X       Tilo                  0.704   controller/Mmux_regA_mux00009635
+                                                       controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.F4      net (fanout=1)        0.614   controller/Mmux_regA_mux00009635
+    SLICE_X23Y10.X       Tilo                  0.704   controller/Mmux_regA_mux00009699
+                                                       controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.G4      net (fanout=2)        1.163   controller/Mmux_regA_mux00009699
+    SLICE_X25Y14.Y       Tilo                  0.704   N205
+                                                       controller/Mmux_regA_mux000096115_SW0
+    SLICE_X22Y14.F2      net (fanout=1)        0.399   N208
+    SLICE_X22Y14.CLK     Tfck                  0.892   controller/regA<9>
+                                                       controller/Mmux_regA_mux000096146
+                                                       controller/regA_9
+    -------------------------------------------------  ---------------------------
+    Total                                     19.726ns (10.150ns logic, 9.576ns route)
+                                                       (51.5% logic, 48.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point controller/regA_29 (SLICE_X16Y31.F4), 1317 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.181ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.819ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y11.G4      net (fanout=5)        0.143   controller/mem_sel120
+    SLICE_X12Y11.Y       Tilo                  0.759   controller/operand<1>13
+                                                       controller/mem_sel
+    SLICE_X18Y16.G4      net (fanout=34)       1.060   data_sel
+    SLICE_X18Y16.Y       Tilo                  0.759   controller/operand<31>46_2
+                                                       controller/operand<31>8
+    SLICE_X19Y33.G3      net (fanout=6)        0.748   controller/operand<31>8
+    SLICE_X19Y33.Y       Tilo                  0.704   controller/Mmux_regA_mux00007254
+                                                       controller/operand<31>46_2
+    SLICE_X17Y29.G4      net (fanout=14)       0.767   controller/operand<31>46_1
+    SLICE_X17Y29.Y       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674_SW0
+    SLICE_X17Y29.F4      net (fanout=1)        0.023   controller/Mmux_regA_mux00006674_SW0/O
+    SLICE_X17Y29.X       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.G4      net (fanout=2)        0.436   controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.Y       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux00006697
+    SLICE_X14Y31.F4      net (fanout=1)        0.639   controller/Mmux_regA_mux00006697/O
+    SLICE_X14Y31.X       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux000066115_SW1
+    SLICE_X16Y31.F4      net (fanout=1)        0.310   N37
+    SLICE_X16Y31.CLK     Tfck                  0.892   controller/regA<29>
+                                                       controller/Mmux_regA_mux000066147
+                                                       controller/regA_29
+    -------------------------------------------------  ---------------------------
+    Total                                     19.819ns (12.226ns logic, 7.593ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.244ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.756ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB30    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G1        net (fanout=126)      1.834   instruction<30>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y10.F4      net (fanout=5)        0.078   controller/mem_sel120
+    SLICE_X12Y10.X       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       addr_decoder/Mmux_data_to_rd1101_1
+    SLICE_X18Y16.G3      net (fanout=21)       1.062   addr_decoder/Mmux_data_to_rd1101
+    SLICE_X18Y16.Y       Tilo                  0.759   controller/operand<31>46_2
+                                                       controller/operand<31>8
+    SLICE_X19Y33.G3      net (fanout=6)        0.748   controller/operand<31>8
+    SLICE_X19Y33.Y       Tilo                  0.704   controller/Mmux_regA_mux00007254
+                                                       controller/operand<31>46_2
+    SLICE_X17Y29.G4      net (fanout=14)       0.767   controller/operand<31>46_1
+    SLICE_X17Y29.Y       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674_SW0
+    SLICE_X17Y29.F4      net (fanout=1)        0.023   controller/Mmux_regA_mux00006674_SW0/O
+    SLICE_X17Y29.X       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.G4      net (fanout=2)        0.436   controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.Y       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux00006697
+    SLICE_X14Y31.F4      net (fanout=1)        0.639   controller/Mmux_regA_mux00006697/O
+    SLICE_X14Y31.X       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux000066115_SW1
+    SLICE_X16Y31.F4      net (fanout=1)        0.310   N37
+    SLICE_X16Y31.CLK     Tfck                  0.892   controller/regA<29>
+                                                       controller/Mmux_regA_mux000066147
+                                                       controller/regA_29
+    -------------------------------------------------  ---------------------------
+    Total                                     19.756ns (12.226ns logic, 7.530ns route)
+                                                       (61.9% logic, 38.1% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.283ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               ram/Mram_mem.B (RAM)
+  Destination:          controller/regA_29 (FF)
+  Requirement:          20.000ns
+  Data Path Delay:      19.717ns (Levels of Logic = 12)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: ram/Mram_mem.B to controller/regA_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOB29    Tbcko                 2.812   ram/Mram_mem
+                                                       ram/Mram_mem.B
+    SLICE_X9Y0.G4        net (fanout=112)      1.732   instruction<29>
+    SLICE_X9Y0.Y         Tilo                  0.704   N125
+                                                       controller/imm_cmp_eq00001_1
+    SLICE_X8Y3.G3        net (fanout=9)        0.367   controller/imm_cmp_eq00001
+    SLICE_X8Y3.Y         Tilo                  0.759   data_addr<8>
+                                                       controller/mem_addr<8>1_SW0
+    SLICE_X8Y2.G4        net (fanout=3)        0.431   N111
+    SLICE_X8Y2.X         Tif5x                 1.152   controller/mem_sel17
+                                                       controller/mem_sel17_F
+                                                       controller/mem_sel17
+    SLICE_X12Y10.G3      net (fanout=5)        0.835   controller/mem_sel17
+    SLICE_X12Y10.Y       Tilo                  0.759   addr_decoder/Mmux_data_to_rd1101
+                                                       controller/mem_sel120_1
+    SLICE_X12Y11.G4      net (fanout=5)        0.143   controller/mem_sel120
+    SLICE_X12Y11.Y       Tilo                  0.759   controller/operand<1>13
+                                                       controller/mem_sel
+    SLICE_X18Y16.G4      net (fanout=34)       1.060   data_sel
+    SLICE_X18Y16.Y       Tilo                  0.759   controller/operand<31>46_2
+                                                       controller/operand<31>8
+    SLICE_X19Y33.G3      net (fanout=6)        0.748   controller/operand<31>8
+    SLICE_X19Y33.Y       Tilo                  0.704   controller/Mmux_regA_mux00007254
+                                                       controller/operand<31>46_2
+    SLICE_X17Y29.G4      net (fanout=14)       0.767   controller/operand<31>46_1
+    SLICE_X17Y29.Y       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674_SW0
+    SLICE_X17Y29.F4      net (fanout=1)        0.023   controller/Mmux_regA_mux00006674_SW0/O
+    SLICE_X17Y29.X       Tilo                  0.704   controller/Mmux_regA_mux00006674
+                                                       controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.G4      net (fanout=2)        0.436   controller/Mmux_regA_mux00006674
+    SLICE_X14Y31.Y       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux00006697
+    SLICE_X14Y31.F4      net (fanout=1)        0.639   controller/Mmux_regA_mux00006697/O
+    SLICE_X14Y31.X       Tilo                  0.759   N37
+                                                       controller/Mmux_regA_mux000066115_SW1
+    SLICE_X16Y31.F4      net (fanout=1)        0.310   N37
+    SLICE_X16Y31.CLK     Tfck                  0.892   controller/regA<29>
+                                                       controller/Mmux_regA_mux000066147
+                                                       controller/regA_29
+    -------------------------------------------------  ---------------------------
+    Total                                     19.717ns (12.226ns logic, 7.491ns route)
+                                                       (62.0% logic, 38.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clkin = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point regf/Mram_regf28 (SLICE_X16Y24.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.856ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controller/regA_27 (FF)
+  Destination:          regf/Mram_regf28 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.858ns (Levels of Logic = 1)
+  Clock Path Skew:      0.002ns (0.028 - 0.026)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: controller/regA_27 to regf/Mram_regf28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X18Y24.XQ      Tcko                  0.474   controller/regA<27>
+                                                       controller/regA_27
+    SLICE_X16Y24.BX      net (fanout=12)       0.533   controller/regA<27>
+    SLICE_X16Y24.CLK     Tdh         (-Th)     0.149   regf/_varindex0000<27>
+                                                       regf/Mram_regf28
+    -------------------------------------------------  ---------------------------
+    Total                                      0.858ns (0.325ns logic, 0.533ns route)
+                                                       (37.9% logic, 62.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point controller/regB_3 (SLICE_X22Y10.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.147ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controller/regA_3 (FF)
+  Destination:          controller/regB_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      1.150ns (Levels of Logic = 0)
+  Clock Path Skew:      0.003ns (0.005 - 0.002)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: controller/regA_3 to controller/regB_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y13.XQ      Tcko                  0.474   controller/regA<3>
+                                                       controller/regA_3
+    SLICE_X22Y10.BX      net (fanout=15)       0.542   controller/regA<3>
+    SLICE_X22Y10.CLK     Tckdi       (-Th)    -0.134   controller/regB<3>
+                                                       controller/regB_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.150ns (0.608ns logic, 0.542ns route)
+                                                       (52.9% logic, 47.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point regf/Mram_regf17 (SLICE_X16Y23.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      1.161ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               controller/regA_16 (FF)
+  Destination:          regf/Mram_regf17 (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.171ns (Levels of Logic = 1)
+  Clock Path Skew:      0.010ns (0.028 - 0.018)
+  Source Clock:         clk_BUFGP rising at 20.000ns
+  Destination Clock:    clk_BUFGP rising at 20.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: controller/regA_16 to regf/Mram_regf17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X22Y27.XQ      Tcko                  0.474   controller/regA<16>
+                                                       controller/regA_16
+    SLICE_X16Y23.BX      net (fanout=11)       0.846   controller/regA<16>
+    SLICE_X16Y23.CLK     Tdh         (-Th)     0.149   regf/_varindex0000<16>
+                                                       regf/Mram_regf17
+    -------------------------------------------------  ---------------------------
+    Total                                      1.171ns (0.325ns logic, 0.846ns route)
+                                                       (27.8% logic, 72.2% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clkin = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: controller/pc<0>/SR
+  Logical resource: controller/pc_0/SR
+  Location pin: SLICE_X11Y3.SR
+  Clock network: rst_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 20.000ns
+  High pulse: 10.000ns
+  High pulse limit: 1.596ns (Trpw)
+  Physical resource: controller/pc<0>/SR
+  Logical resource: controller/pc_0/SR
+  Location pin: SLICE_X11Y3.SR
+  Clock network: rst_IBUF
+--------------------------------------------------------------------------------
+Slack: 16.808ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 20.000ns
+  Low pulse: 10.000ns
+  Low pulse limit: 1.596ns (Trpw)
+  Physical resource: controller/pc<1>/SR
+  Logical resource: controller/pc_1/SR
+  Location pin: SLICE_X10Y1.SR
+  Clock network: rst_IBUF
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   19.920|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 6003124 paths, 0 nets, and 3306 connections
+
+Design statistics:
+   Minimum period:  19.920ns{1}   (Maximum frequency:  50.201MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sun Nov 17 12:31:28 2019 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 341 MB
+
+
+

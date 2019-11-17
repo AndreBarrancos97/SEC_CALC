@@ -1,0 +1,605 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: xtop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "xtop.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "xtop"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : xtop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "rtl/src/xregf.v" in library work
+Compiling verilog include file "xdefs.vh"
+Compiling verilog file "rtl/src/xram.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xregf> compiled
+Compiling verilog file "rtl/src/xled.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xram> compiled
+Compiling verilog file "rtl/src/xctrl.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xled> compiled
+Compiling verilog file "rtl/src/xaddr_decoder.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xctrl> compiled
+Compiling verilog file "rtl/src/xtop.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xaddr_decoder> compiled
+Module <xtop> compiled
+No errors in compilation
+Analysis of file <"xtop.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <xtop> in library <work>.
+
+Analyzing hierarchy for module <xctrl> in library <work>.
+
+Analyzing hierarchy for module <xram> in library <work>.
+
+Analyzing hierarchy for module <xregf> in library <work>.
+
+Analyzing hierarchy for module <xaddr_decoder> in library <work>.
+
+Analyzing hierarchy for module <xled> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <xtop>.
+Module <xtop> is correct for synthesis.
+ 
+Analyzing module <xctrl> in library <work>.
+Module <xctrl> is correct for synthesis.
+ 
+Analyzing module <xram> in library <work>.
+INFO:Xst:2546 - "rtl/src/xram.v" line 63: reading initialization file "program.hex".
+Module <xram> is correct for synthesis.
+ 
+Analyzing module <xregf> in library <work>.
+Module <xregf> is correct for synthesis.
+ 
+Analyzing module <xaddr_decoder> in library <work>.
+Module <xaddr_decoder> is correct for synthesis.
+ 
+Analyzing module <xled> in library <work>.
+Module <xled> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <xctrl>.
+    Related source file is "rtl/src/xctrl.v".
+    Found 9-bit register for signal <pc>.
+    Found 32-bit addsub for signal <adder_res>.
+    Found 32-bit adder for signal <adder_res$addsub0000>.
+    Found 1-bit xor2 for signal <alu_overflow$xor0000> created at line 212.
+    Found 1-bit xor2 for signal <alu_overflow$xor0001> created at line 218.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_result>.
+    Found 1-bit adder for signal <carry_res_n$addsub0000> created at line 188.
+    Found 1-bit adder for signal <carry_res_n$addsub0001> created at line 190.
+    Found 1-bit xor2 for signal <carry_res_n$xor0000> created at line 188.
+    Found 1-bit xor2 for signal <carry_res_n$xor0001> created at line 190.
+    Found 32-bit addsub for signal <carry_res_n_1>.
+    Found 32-bit 4-to-1 multiplexer for signal <operand$mux0000>.
+    Found 9-bit adder for signal <pc$addsub0000> created at line 122.
+    Found 32-bit register for signal <regA>.
+    Found 32-bit subtractor for signal <regA$addsub0000> created at line 153.
+    Found 32-bit 4-to-1 multiplexer for signal <regA$mux0000>.
+    Found 32-bit register for signal <regB>.
+    Found 3-bit register for signal <regC>.
+    Found 32-bit xor2 for signal <xor_res>.
+    Summary:
+	inferred  76 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  96 Multiplexer(s).
+Unit <xctrl> synthesized.
+
+
+Synthesizing Unit <xram>.
+    Related source file is "rtl/src/xram.v".
+    Found 512x32-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 32-bit register for signal <instruction>.
+    Found 32-bit register for signal <data_out_int>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  64 D-type flip-flop(s).
+Unit <xram> synthesized.
+
+
+Synthesizing Unit <xregf>.
+    Related source file is "rtl/src/xregf.v".
+    Found 16x32-bit single-port RAM <Mram_regf> for signal <regf>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <xregf> synthesized.
+
+
+Synthesizing Unit <xaddr_decoder>.
+    Related source file is "rtl/src/xaddr_decoder.v".
+    Found 32-bit 4-to-1 multiplexer for signal <data_to_rd>.
+    Summary:
+	inferred  32 Multiplexer(s).
+Unit <xaddr_decoder> synthesized.
+
+
+Synthesizing Unit <xled>.
+    Related source file is "rtl/src/xled.v".
+    Found 1-bit register for signal <led0>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <xled> synthesized.
+
+
+Synthesizing Unit <xtop>.
+    Related source file is "rtl/src/xtop.v".
+Unit <xtop> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x32-bit single-port RAM                             : 1
+ 512x32-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 7
+ 1-bit adder                                           : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 9-bit register                                        : 1
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+# Xors                                                 : 5
+ 1-bit xor2                                            : 4
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <xram>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out_int> <instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <data_sel>      | high     |
+    |     weA            | connected to signal <data_we>       | high     |
+    |     addrA          | connected to signal <data_addr>     |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to signal <data_out_int>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <pc>            |          |
+    |     doB            | connected to signal <instruction>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <xram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <xregf>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regf> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <xregf> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x32-bit single-port distributed RAM                 : 1
+ 512x32-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 7
+ 1-bit adder                                           : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 4
+# Xors                                                 : 5
+ 1-bit xor2                                            : 4
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <xtop> ...
+
+Optimizing unit <xctrl> ...
+
+Optimizing unit <xregf> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 38.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 77
+ Flip-Flops                                            : 77
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : xtop.ngr
+Top Level Output File Name         : xtop
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 5
+
+Cell Usage :
+# BELS                             : 1047
+#      GND                         : 1
+#      INV                         : 32
+#      LUT1                        : 9
+#      LUT2                        : 73
+#      LUT2_D                      : 1
+#      LUT3                        : 92
+#      LUT3_D                      : 11
+#      LUT3_L                      : 36
+#      LUT4                        : 405
+#      LUT4_D                      : 59
+#      LUT4_L                      : 91
+#      MUXCY                       : 109
+#      MUXF5                       : 22
+#      VCC                         : 1
+#      XORCY                       : 105
+# FlipFlops/Latches                : 77
+#      FDC                         : 9
+#      FDCE                        : 68
+# RAMS                             : 33
+#      RAM16X1S                    : 32
+#      RAMB16_S36_S36              : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                      437  out of    960    45%  
+ Number of Slice Flip Flops:             77  out of   1920     4%  
+ Number of 4 input LUTs:                841  out of   1920    43%  
+    Number used as logic:               809
+    Number used as RAMs:                 32
+ Number of IOs:                           5
+ Number of bonded IOBs:                   5  out of     83     6%  
+ Number of BRAMs:                         1  out of      4    25%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 110   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 77    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 20.684ns (Maximum Frequency: 48.347MHz)
+   Minimum input arrival time before clock: 4.695ns
+   Maximum output required time after clock: 16.566ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 20.684ns (frequency: 48.347MHz)
+  Total number of paths / destination ports: 6005074 / 388
+-------------------------------------------------------------------------
+Delay:               20.684ns (Levels of Logic = 41)
+  Source:            ram/Mram_mem (RAM)
+  Destination:       controller/regC_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ram/Mram_mem to controller/regC_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S36_S36:CLKB->DOB31   70   2.800   1.449  ram/Mram_mem (instruction<31>)
+     LUT4_D:I0->O          8   0.704   0.792  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
+     LUT3_D:I2->O          2   0.704   0.622  controller/mem_addr<4>1_SW0 (N115)
+     LUT4:I0->O            1   0.704   0.000  controller/mem_sel17_F (N605)
+     MUXF5:I0->O           5   0.321   0.637  controller/mem_sel17 (controller/mem_sel17)
+     LUT4_D:I3->O          4   0.704   0.591  controller/mem_sel120_1 (controller/mem_sel120)
+     LUT4_D:I3->O         33   0.704   1.267  controller/mem_sel (data_sel)
+     LUT4:I3->O            2   0.704   0.451  controller/operand<2>13 (controller/operand<2>13)
+     LUT4:I3->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<2> (controller/Maddsub_carry_res_n_1_lut<2>)
+     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<3> (controller/Maddsub_carry_res_n_1_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<4> (controller/Maddsub_carry_res_n_1_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<5> (controller/Maddsub_carry_res_n_1_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<6> (controller/Maddsub_carry_res_n_1_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<7> (controller/Maddsub_carry_res_n_1_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<8> (controller/Maddsub_carry_res_n_1_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<9> (controller/Maddsub_carry_res_n_1_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<10> (controller/Maddsub_carry_res_n_1_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<11> (controller/Maddsub_carry_res_n_1_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<12> (controller/Maddsub_carry_res_n_1_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<13> (controller/Maddsub_carry_res_n_1_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<14> (controller/Maddsub_carry_res_n_1_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<15> (controller/Maddsub_carry_res_n_1_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<16> (controller/Maddsub_carry_res_n_1_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<17> (controller/Maddsub_carry_res_n_1_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<18> (controller/Maddsub_carry_res_n_1_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<19> (controller/Maddsub_carry_res_n_1_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<20> (controller/Maddsub_carry_res_n_1_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<21> (controller/Maddsub_carry_res_n_1_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<22> (controller/Maddsub_carry_res_n_1_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<23> (controller/Maddsub_carry_res_n_1_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<24> (controller/Maddsub_carry_res_n_1_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<25> (controller/Maddsub_carry_res_n_1_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<26> (controller/Maddsub_carry_res_n_1_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<27> (controller/Maddsub_carry_res_n_1_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<28> (controller/Maddsub_carry_res_n_1_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<29> (controller/Maddsub_carry_res_n_1_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  controller/Maddsub_carry_res_n_1_xor<30> (controller/carry_res_n_1<30>)
+     LUT2:I1->O            1   0.704   0.000  controller/Maddsub_adder_res_lut<30> (controller/Maddsub_adder_res_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  controller/Maddsub_adder_res_cy<30> (controller/Maddsub_adder_res_cy<30>)
+     XORCY:CI->O           2   0.804   0.482  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
+     LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
+     FDCE:D                    0.308          controller/regC_2
+    ----------------------------------------
+    Total                     20.684ns (13.894ns logic, 6.790ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.695ns (Levels of Logic = 3)
+  Source:            sw0 (PAD)
+  Destination:       led00/led0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sw0 to led00/led0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  sw0_IBUF (sw0_IBUF)
+     LUT3:I0->O            1   0.704   0.499  led00/led0_and00005 (led00/led0_and00005)
+     LUT3:I1->O            1   0.704   0.420  led00/led0_and000019 (led00/led0_and0000)
+     FDCE:CE                   0.555          led00/led0
+    ----------------------------------------
+    Total                      4.695ns (3.181ns logic, 1.514ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 187 / 2
+-------------------------------------------------------------------------
+Offset:              16.566ns (Levels of Logic = 8)
+  Source:            ram/Mram_mem (RAM)
+  Destination:       trap (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ram/Mram_mem to trap
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S36_S36:CLKB->DOB31   70   2.800   1.449  ram/Mram_mem (instruction<31>)
+     LUT4_D:I0->O          8   0.704   0.792  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
+     LUT3_D:I2->O          2   0.704   0.622  controller/mem_addr<4>1_SW0 (N115)
+     LUT4:I0->O            1   0.704   0.000  controller/mem_sel17_F (N605)
+     MUXF5:I0->O           5   0.321   0.637  controller/mem_sel17 (controller/mem_sel17)
+     LUT4_D:I3->O          4   0.704   0.591  controller/mem_sel120_1 (controller/mem_sel120)
+     LUT4_D:I3->O         33   0.704   1.438  controller/mem_sel (data_sel)
+     LUT3:I0->O            1   0.704   0.420  addr_decoder/trap_sel67 (trap_OBUF)
+     OBUF:I->O                 3.272          trap_OBUF (trap)
+    ----------------------------------------
+    Total                     16.566ns (10.617ns logic, 5.949ns route)
+                                       (64.1% logic, 35.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 38.00 secs
+Total CPU time to Xst completion: 37.74 secs
+ 
+--> 
+
+
+Total memory usage is 520860 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

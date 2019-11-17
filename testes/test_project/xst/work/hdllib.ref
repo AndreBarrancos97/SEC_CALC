@@ -1,0 +1,6 @@
+MO xtop NULL rtl/src/xtop.v vlg07/xtop.bin 1574011825
+MO xctrl NULL rtl/src/xctrl.v vlg49/xctrl.bin 1574011825
+MO xaddr_decoder NULL rtl/src/xaddr_decoder.v vlg54/xaddr__decoder.bin 1574011825
+MO xram NULL rtl/src/xram.v vlg0C/xram.bin 1574011825
+MO xregf NULL rtl/src/xregf.v vlg68/xregf.bin 1574011825
+MO xled NULL rtl/src/xled.v vlg01/xled.bin 1574011825
