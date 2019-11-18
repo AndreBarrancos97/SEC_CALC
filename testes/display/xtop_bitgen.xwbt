@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/markiyan/Documents/SEC/SEC_CALC/testes/display/xtop.ncd
+OUTFILE=/home/markiyan/Documents/SEC/SEC_CALC/testes/display/xtop.bit
+FAMILY=Spartan3E
+PART=xc3s100e-4cp132
+WORKINGDIR=/home/markiyan/Documents/SEC/SEC_CALC/testes/display
+LICENSE=WebPack
+USER_INFO=211500984_0_0_979
