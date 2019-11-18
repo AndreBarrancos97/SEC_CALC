@@ -153,12 +153,14 @@ module xtop (
 	xdispDecoder displayDecoder(
 			.clk(clk),
 			.rst(rst),
-			.bin(Sw[7:0]),
-			.sgn(1'b1),
-			.disp_select(Disp_sel[3:0]),
-			.disp_value(Disp[7:0])
-			
+			.msg(2'b00),  //00 - normal mode; 01 - OP; 10 - VAL; 11 - ERR
+			.bin(Sw[7:0]), //8-bit binary number to be displayed. being 255 the limit
+			.sgn(1'b0), //0 - no signal; 1 - negative signal
+			.dot(2'b00), //01 - 2nd display, 10 - 3rd display, 00 - none | (DOT POINT)
+			.disp_select(Disp_sel[3:0]), //wich display will be selected
+			.disp_value(Disp[7:0]) //value to be displayed
 	);
+	
 	/*xdisplay disp(
 			.reset(rst),
 			.clk(clk),

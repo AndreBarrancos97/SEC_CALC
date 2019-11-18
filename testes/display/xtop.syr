@@ -169,6 +169,8 @@ Analyzing module <xaddr_decoder> in library <work>.
 Module <xaddr_decoder> is correct for synthesis.
  
 Analyzing module <xdispDecoder> in library <work>.
+WARNING:Xst:905 - "rtl/src/xdispDecoder.v" line 55: One or more signals are missing in the sensitivity list of always block. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <disp_dot>
 Module <xdispDecoder> is correct for synthesis.
  
 Analyzing module <xleds> in library <work>.
@@ -238,36 +240,32 @@ Unit <xaddr_decoder> synthesized.
 
 Synthesizing Unit <xdispDecoder>.
     Related source file is "rtl/src/xdispDecoder.v".
-WARNING:Xst:1305 - Output <disp_select> is never assigned. Tied to value 0000.
-WARNING:Xst:1872 - Variable <i> is used but never assigned.
-    Found 16x8-bit ROM for signal <disp_value$mux0000>.
-    Found 16x8-bit ROM for signal <disp_value$mux0001>.
-    Found 16x8-bit ROM for signal <disp_value$mux0002>.
-    Found 8-bit 4-to-1 multiplexer for signal <disp_value>.
-    Found 4-bit adder for signal <$add0000> created at line 72.
-    Found 4-bit adder for signal <$add0001> created at line 72.
-    Found 4-bit adder for signal <$add0002> created at line 72.
-    Found 4-bit adder for signal <$add0003> created at line 72.
-    Found 4-bit adder for signal <$add0004> created at line 74.
-    Found 4-bit adder for signal <$add0005> created at line 72.
-    Found 4-bit adder for signal <$add0006> created at line 74.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 71.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 71.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 71.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 73.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 71.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 73.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 71.
-    Found 16-bit up counter for signal <displayed_number>.
-    Found 27-bit up counter for signal <one_second_counter>.
-    Found 27-bit comparator greatequal for signal <one_second_counter$cmp_ge0000> created at line 37.
+    Using one-hot encoding for signal <disp_dot>.
+    Found 4x2-bit ROM for signal <disp_dot>.
+    Found 1-of-4 decoder for signal <disp_select>.
+    Found 4-bit adder for signal <$add0000> created at line 43.
+    Found 4-bit adder for signal <$add0001> created at line 43.
+    Found 4-bit adder for signal <$add0002> created at line 43.
+    Found 4-bit adder for signal <$add0003> created at line 43.
+    Found 4-bit adder for signal <$add0004> created at line 45.
+    Found 4-bit adder for signal <$add0005> created at line 43.
+    Found 4-bit adder for signal <$add0006> created at line 45.
+    Found 5-bit 4-to-1 multiplexer for signal <aux>.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 42.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 42.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 42.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 44.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 42.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 44.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 42.
     Found 20-bit up counter for signal <refresh_counter>.
     Summary:
-	inferred   3 ROM(s).
-	inferred   3 Counter(s).
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
 	inferred   7 Adder/Subtractor(s).
-	inferred   8 Comparator(s).
-	inferred   8 Multiplexer(s).
+	inferred   7 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Decoder(s).
 Unit <xdispDecoder> synthesized.
 
 
@@ -293,8 +291,8 @@ Macro Statistics
 # RAMs                                                 : 2
  16x32-bit single-port RAM                             : 1
  512x32-bit dual-port RAM                              : 1
-# ROMs                                                 : 3
- 16x8-bit ROM                                          : 3
+# ROMs                                                 : 1
+ 4x2-bit ROM                                           : 1
 # Adders/Subtractors                                   : 14
  1-bit adder                                           : 2
  32-bit adder                                          : 1
@@ -302,20 +300,20 @@ Macro Statistics
  32-bit subtractor                                     : 1
  4-bit adder                                           : 7
  9-bit adder                                           : 1
-# Counters                                             : 2
+# Counters                                             : 1
  20-bit up counter                                     : 1
- 27-bit up counter                                     : 1
 # Registers                                            : 7
  3-bit register                                        : 1
  32-bit register                                       : 4
  8-bit register                                        : 1
  9-bit register                                        : 1
-# Comparators                                          : 8
- 27-bit comparator greatequal                          : 1
+# Comparators                                          : 7
  4-bit comparator greater                              : 7
 # Multiplexers                                         : 5
  32-bit 4-to-1 multiplexer                             : 4
- 8-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -377,8 +375,8 @@ Macro Statistics
 # RAMs                                                 : 2
  16x32-bit single-port distributed RAM                 : 1
  512x32-bit dual-port block RAM                        : 1
-# ROMs                                                 : 3
- 16x8-bit ROM                                          : 3
+# ROMs                                                 : 1
+ 4x2-bit ROM                                           : 1
 # Adders/Subtractors                                   : 14
  1-bit adder                                           : 2
  32-bit adder                                          : 1
@@ -394,7 +392,9 @@ Macro Statistics
  4-bit comparator greater                              : 7
 # Multiplexers                                         : 5
  32-bit 4-to-1 multiplexer                             : 4
- 8-bit 4-to-1 multiplexer                              : 1
+ 5-bit 4-to-1 multiplexer                              : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -417,7 +417,7 @@ Optimizing unit <xleds> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 45.
+Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 43.
 
 Final Macro Processing ...
 
@@ -455,20 +455,20 @@ Design Statistics
 # IOs                              : 35
 
 Cell Usage :
-# BELS                             : 1128
+# BELS                             : 1171
 #      GND                         : 1
 #      INV                         : 33
 #      LUT1                        : 28
-#      LUT2                        : 47
-#      LUT3                        : 97
+#      LUT2                        : 54
+#      LUT2_L                      : 1
+#      LUT3                        : 117
 #      LUT3_D                      : 11
-#      LUT3_L                      : 17
-#      LUT4                        : 445
-#      LUT4_D                      : 74
-#      LUT4_L                      : 57
+#      LUT3_L                      : 26
+#      LUT4                        : 450
+#      LUT4_D                      : 64
+#      LUT4_L                      : 85
 #      MUXCY                       : 128
-#      MUXF5                       : 62
-#      MUXF6                       : 2
+#      MUXF5                       : 47
 #      VCC                         : 1
 #      XORCY                       : 125
 # FlipFlops/Latches                : 104
@@ -489,10 +489,10 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      443  out of    960    46%  
+ Number of Slices:                      469  out of    960    48%  
  Number of Slice Flip Flops:            104  out of   1920     5%  
- Number of 4 input LUTs:                841  out of   1920    43%  
-    Number used as logic:               809
+ Number of 4 input LUTs:                901  out of   1920    46%  
+    Number used as logic:               869
     Number used as RAMs:                 32
  Number of IOs:                          35
  Number of bonded IOBs:                  31  out of     83    37%  
@@ -535,10 +535,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 21.124ns (Maximum Frequency: 47.339MHz)
-   Minimum input arrival time before clock: 2.628ns
-   Maximum output required time after clock: 16.152ns
-   Maximum combinational path delay: 18.237ns
+   Minimum period: 20.531ns (Maximum Frequency: 48.707MHz)
+   Minimum input arrival time before clock: 2.611ns
+   Maximum output required time after clock: 16.354ns
+   Maximum combinational path delay: 17.267ns
 
 Timing Detail:
 --------------
@@ -546,32 +546,29 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 21.124ns (frequency: 47.339MHz)
-  Total number of paths / destination ports: 6923446 / 415
+  Clock period: 20.531ns (frequency: 48.707MHz)
+  Total number of paths / destination ports: 6027536 / 415
 -------------------------------------------------------------------------
-Delay:               21.124ns (Levels of Logic = 45)
+Delay:               20.531ns (Levels of Logic = 42)
   Source:            ram/Mram_mem (RAM)
-  Destination:       controller/regA_31 (FF)
+  Destination:       controller/regC_2 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ram/Mram_mem to controller/regA_31
+  Data Path: ram/Mram_mem to controller/regC_2
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16_S36_S36:CLKB->DOB28   73   2.800   1.450  ram/Mram_mem (instruction<28>)
+     RAMB16_S36_S36:CLKB->DOB30   93   2.800   1.456  ram/Mram_mem (instruction<30>)
      LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
-     LUT3_D:I2->O          2   0.704   0.526  controller/mem_addr<5>1_SW0 (N148)
-     LUT4:I1->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N573)
-     MUXF5:I0->O           4   0.321   0.591  controller/mem_sel121_SW0 (N64)
-     LUT4_D:I3->O          2   0.704   0.451  controller/mem_sel121_1 (controller/mem_sel121)
-     LUT4:I3->O            2   0.704   0.451  addr_decoder/Mmux_data_to_rd1101_1 (addr_decoder/Mmux_data_to_rd1101)
-     LUT4:I3->O            1   0.704   0.000  controller/operand<0>111_SW0_G (N356)
-     MUXF5:I1->O           1   0.321   0.424  controller/operand<0>111_SW0 (N179)
-     LUT4:I3->O            4   0.704   0.622  controller/operand<0>30 (controller/operand<0>)
-     LUT3:I2->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<0> (controller/Maddsub_carry_res_n_1_lut<0>)
-     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<0> (controller/Maddsub_carry_res_n_1_cy<0>)
-     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<1> (controller/Maddsub_carry_res_n_1_cy<1>)
+     LUT3_D:I2->O          2   0.704   0.526  controller/mem_addr<5>1_SW0 (N138)
+     LUT4:I1->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N632)
+     MUXF5:I0->O           5   0.321   0.637  controller/mem_sel121_SW0 (N56)
+     LUT4_D:I3->O          5   0.704   0.637  controller/mem_sel121_1 (controller/mem_sel121)
+     LUT4:I3->O           36   0.704   1.267  controller/mem_sel (data_sel)
+     LUT4:I3->O            2   0.704   0.451  controller/operand<1>13 (controller/operand<1>13)
+     LUT4:I3->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<1> (controller/Maddsub_carry_res_n_1_lut<1>)
+     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<1> (controller/Maddsub_carry_res_n_1_cy<1>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<3> (controller/Maddsub_carry_res_n_1_cy<3>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<4> (controller/Maddsub_carry_res_n_1_cy<4>)
@@ -603,37 +600,37 @@ Delay:               21.124ns (Levels of Logic = 45)
      XORCY:CI->O           1   0.804   0.499  controller/Maddsub_carry_res_n_1_xor<30> (controller/carry_res_n_1<30>)
      LUT2:I1->O            1   0.704   0.000  controller/Maddsub_adder_res_lut<30> (controller/Maddsub_adder_res_lut<30>)
      MUXCY:S->O            0   0.464   0.000  controller/Maddsub_adder_res_cy<30> (controller/Maddsub_adder_res_cy<30>)
-     XORCY:CI->O           2   0.804   0.451  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
-     LUT4:I3->O            1   0.704   0.000  controller/alu_negative32 (controller/alu_negative)
+     XORCY:CI->O           2   0.804   0.482  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
+     LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
      FDCE:D                    0.308          controller/regC_2
     ----------------------------------------
-    Total                     21.124ns (15.037ns logic, 6.087ns route)
-                                       (71.2% logic, 28.8% route)
+    Total                     20.531ns (13.953ns logic, 6.578ns route)
+                                       (68.0% logic, 32.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              2.628ns (Levels of Logic = 1)
-  Source:            Sw<3> (PAD)
-  Destination:       leds/led_3 (FF)
+Offset:              2.611ns (Levels of Logic = 1)
+  Source:            Sw<6> (PAD)
+  Destination:       leds/led_6 (FF)
   Destination Clock: clk rising
 
-  Data Path: Sw<3> to leds/led_3
+  Data Path: Sw<6> to leds/led_6
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            20   1.218   1.102  Sw_3_IBUF (Sw_3_IBUF)
-     FDCE:D                    0.308          leds/led_3
+     IBUF:I->O            19   1.218   1.085  Sw_6_IBUF (Sw_6_IBUF)
+     FDCE:D                    0.308          leds/led_6
     ----------------------------------------
-    Total                      2.628ns (1.526ns logic, 1.102ns route)
-                                       (58.1% logic, 41.9% route)
+    Total                      2.611ns (1.526ns logic, 1.085ns route)
+                                       (58.4% logic, 41.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 240 / 16
+  Total number of paths / destination ports: 391 / 21
 -------------------------------------------------------------------------
-Offset:              16.152ns (Levels of Logic = 7)
+Offset:              16.354ns (Levels of Logic = 8)
   Source:            ram/Mram_mem (RAM)
   Destination:       trap (PAD)
   Source Clock:      clk rising
@@ -642,59 +639,60 @@ Offset:              16.152ns (Levels of Logic = 7)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16_S36_S36:CLKB->DOB28   73   2.800   1.450  ram/Mram_mem (instruction<28>)
-     LUT4_D:I0->O         43   0.704   1.301  controller/imm_cmp_eq00001 (controller/imm_cmp_eq0000)
-     LUT3_D:I2->O          1   0.704   0.455  controller/mem_addr<1>1_SW0 (N156)
-     LUT3:I2->O           65   0.704   1.277  controller/mem_addr<1>1 (data_addr<1>)
-     LUT4:I3->O            1   0.704   0.499  addr_decoder/trap_sel30 (addr_decoder/trap_sel30)
-     LUT4:I1->O            1   0.704   0.455  addr_decoder/trap_sel39 (addr_decoder/trap_sel39)
-     LUT3:I2->O            1   0.704   0.420  addr_decoder/trap_sel67 (trap_OBUF)
+     RAMB16_S36_S36:CLKB->DOB30   93   2.800   1.456  ram/Mram_mem (instruction<30>)
+     LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
+     LUT3_D:I2->O          2   0.704   0.526  controller/mem_addr<5>1_SW0 (N138)
+     LUT4:I1->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N632)
+     MUXF5:I0->O           5   0.321   0.637  controller/mem_sel121_SW0 (N56)
+     LUT4_D:I3->O          5   0.704   0.637  controller/mem_sel121_1 (controller/mem_sel121)
+     LUT4:I3->O           36   0.704   1.438  controller/mem_sel (data_sel)
+     LUT3:I0->O            1   0.704   0.420  addr_decoder/trap_sel67 (trap_OBUF)
      OBUF:I->O                 3.272          trap_OBUF (trap)
     ----------------------------------------
-    Total                     16.152ns (10.296ns logic, 5.856ns route)
-                                       (63.7% logic, 36.3% route)
+    Total                     16.354ns (10.617ns logic, 5.737ns route)
+                                       (64.9% logic, 35.1% route)
 
 =========================================================================
 Timing constraint: Default path analysis
-  Total number of paths / destination ports: 9310 / 7
+  Total number of paths / destination ports: 6822 / 7
 -------------------------------------------------------------------------
-Delay:               18.237ns (Levels of Logic = 13)
+Delay:               17.267ns (Levels of Logic = 13)
   Source:            Sw<7> (PAD)
-  Destination:       Disp<3> (PAD)
+  Destination:       Disp<4> (PAD)
 
-  Data Path: Sw<7> to Disp<3>
+  Data Path: Sw<7> to Disp<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            15   1.218   1.192  Sw_7_IBUF (Sw_7_IBUF)
-     LUT4:I0->O            1   0.704   0.000  displayDecoder/bcd_cmp_gt0002_F (N521)
-     MUXF5:I0->O           2   0.321   0.622  displayDecoder/bcd_cmp_gt0002 (displayDecoder/bcd_cmp_gt0002)
-     LUT2:I0->O            6   0.704   0.704  displayDecoder/bcd_mux00262_SW0 (N27)
-     LUT4:I2->O            8   0.704   0.932  displayDecoder/bcd_mux0016 (displayDecoder/Madd__add0006_cy<0>)
-     LUT4:I0->O            6   0.704   0.748  displayDecoder/bcd_mux0021 (displayDecoder/bcd<7>)
-     LUT2:I1->O            3   0.704   0.706  displayDecoder/Mmux_disp_value1471 (displayDecoder/N46)
-     LUT4:I0->O            1   0.704   0.424  displayDecoder/Mmux_disp_value8259_SW0 (N435)
-     LUT4:I3->O            1   0.704   0.455  displayDecoder/Mmux_disp_value8259 (displayDecoder/Mmux_disp_value8259)
-     LUT3:I2->O            3   0.704   0.566  displayDecoder/Mmux_disp_value82103 (displayDecoder/N9)
-     LUT3:I2->O            1   0.704   0.000  displayDecoder/Mmux_disp_value860_F (N563)
-     MUXF5:I0->O           1   0.321   0.420  displayDecoder/Mmux_disp_value860 (Disp_3_OBUF)
-     OBUF:I->O                 3.272          Disp_3_OBUF (Disp<3>)
+     IBUF:I->O            18   1.218   1.243  Sw_7_IBUF (Sw_7_IBUF)
+     LUT4:I0->O            1   0.704   0.000  displayDecoder/Mmux_aux41_G (N603)
+     MUXF5:I1->O          11   0.321   1.108  displayDecoder/Mmux_aux41 (displayDecoder/N0)
+     LUT2:I0->O            2   0.704   0.451  displayDecoder/bcd_mux001611 (displayDecoder/N26)
+     LUT4:I3->O            1   0.704   0.499  displayDecoder/Mmux_aux758_SW0 (N520)
+     LUT4:I1->O            1   0.704   0.000  displayDecoder/Mmux_aux7178_SW0_F (N626)
+     MUXF5:I0->O           1   0.321   0.455  displayDecoder/Mmux_aux7178_SW0 (N504)
+     LUT4:I2->O            1   0.704   0.000  displayDecoder/Mmux_aux7178_G (N629)
+     MUXF5:I1->O           7   0.321   0.743  displayDecoder/Mmux_aux7178 (displayDecoder/Mmux_aux3)
+     LUT3:I2->O            5   0.704   0.808  displayDecoder/disp_value_1_or000011 (displayDecoder/N11)
+     LUT4:I0->O            1   0.704   0.455  displayDecoder/disp_value_1_or0000_SW2 (N500)
+     LUT4:I2->O            1   0.704   0.420  displayDecoder/disp_value_1_or0000 (Disp_1_OBUF)
+     OBUF:I->O                 3.272          Disp_1_OBUF (Disp<1>)
     ----------------------------------------
-    Total                     18.237ns (11.468ns logic, 6.769ns route)
-                                       (62.9% logic, 37.1% route)
+    Total                     17.267ns (11.085ns logic, 6.182ns route)
+                                       (64.2% logic, 35.8% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.62 secs
+Total CPU time to Xst completion: 11.38 secs
  
 --> 
 
 
-Total memory usage is 523608 kilobytes
+Total memory usage is 522860 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    3 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 
