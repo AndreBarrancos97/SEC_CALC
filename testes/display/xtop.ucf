@@ -34,3 +34,7 @@ NET "Disp_sel<0>" LOC = "F12";
 NET "Disp_sel<1>" LOC = "J12";
 NET "Disp_sel<2>" LOC = "M13";
 NET "Disp_sel<3>" LOC = "K14";
+# Pin assignment for PushButtons
+#NET "Btn<3>" LOC = "A7";
+#NET "Btn<2>" LOC = "M4";
+#NET "Btn<1>" LOC = "C11";

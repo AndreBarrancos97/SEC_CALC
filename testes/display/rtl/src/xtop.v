@@ -5,9 +5,11 @@
 module xtop (
 	     input 		  clk,
 	     input 		  rst,
+		  input [3:0] Btn,
 	     input [7:0] Sw,
-       	     output 		  trap,
-	     output [7:0]		  Led,
+        
+		  output 		  trap,
+	     output [7:0]	  Led,
 	     output [7:0]	  Disp,
 	     output [3:0]   Disp_sel
 				  `ifndef NO_EXT
@@ -148,12 +150,13 @@ module xtop (
    // USER MODULES INSERTED BELOW
    //
    //
-	disp_test disp_test(
-			.clock_100Mhz(clk),
-			.reset(rst),
+	xdispDecoder displayDecoder(
+			.clk(clk),
+			.rst(rst),
 			.bin(Sw[7:0]),
-			.Anode_Activate(Disp_sel[3:0]),
-			.disp(Disp[6:0])
+			.sgn(1'b1),
+			.disp_select(Disp_sel[3:0]),
+			.disp_value(Disp[7:0])
 			
 	);
 	/*xdisplay disp(

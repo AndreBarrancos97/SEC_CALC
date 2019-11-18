@@ -115,17 +115,17 @@ Module <xregf> compiled
 Compiling verilog file "rtl/src/xled.v" in library work
 Compiling verilog include file "xdefs.vh"
 Module <xram> compiled
+Compiling verilog file "rtl/src/xdispDecoder.v" in library work
+Module <xleds> compiled
 Compiling verilog file "rtl/src/xctrl.v" in library work
 Compiling verilog include file "xdefs.vh"
-Module <xleds> compiled
+Module <xdispDecoder> compiled
 Compiling verilog file "rtl/src/xaddr_decoder.v" in library work
 Compiling verilog include file "xdefs.vh"
 Module <xctrl> compiled
-Compiling verilog file "rtl/src/test_display.v" in library work
-Module <xaddr_decoder> compiled
 Compiling verilog file "rtl/src/xtop.v" in library work
 Compiling verilog include file "xdefs.vh"
-Module <disp_test> compiled
+Module <xaddr_decoder> compiled
 Module <xtop> compiled
 No errors in compilation
 Analysis of file <"xtop.prj"> succeeded.
@@ -144,7 +144,7 @@ Analyzing hierarchy for module <xregf> in library <work>.
 
 Analyzing hierarchy for module <xaddr_decoder> in library <work>.
 
-Analyzing hierarchy for module <disp_test> in library <work>.
+Analyzing hierarchy for module <xdispDecoder> in library <work>.
 
 Analyzing hierarchy for module <xleds> in library <work>.
 
@@ -168,8 +168,8 @@ Module <xregf> is correct for synthesis.
 Analyzing module <xaddr_decoder> in library <work>.
 Module <xaddr_decoder> is correct for synthesis.
  
-Analyzing module <disp_test> in library <work>.
-Module <disp_test> is correct for synthesis.
+Analyzing module <xdispDecoder> in library <work>.
+Module <xdispDecoder> is correct for synthesis.
  
 Analyzing module <xleds> in library <work>.
 Module <xleds> is correct for synthesis.
@@ -236,158 +236,39 @@ Synthesizing Unit <xaddr_decoder>.
 Unit <xaddr_decoder> synthesized.
 
 
-Synthesizing Unit <disp_test>.
-    Related source file is "rtl/src/test_display.v".
-WARNING:Xst:646 - Signal <thousands> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <tens> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <shifter<13:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <ones> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:646 - Signal <hundreds> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
-WARNING:Xst:653 - Signal <binary> is used but never assigned. This sourceless signal will be automatically connected to value 00000001111000.
-    Found 4x4-bit ROM for signal <Anode_Activate>.
-    Found 10x7-bit ROM for signal <disp$mux0001>.
-    Found 10x7-bit ROM for signal <disp$mux0002>.
-    Found 10x7-bit ROM for signal <disp$mux0003>.
-WARNING:Xst:737 - Found 7-bit latch for signal <disp>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
-INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
-    Found 4-bit adder for signal <$add0000> created at line 81.
-    Found 4-bit adder for signal <$add0001> created at line 81.
-    Found 4-bit adder for signal <$add0002> created at line 81.
-    Found 4-bit adder for signal <$add0003> created at line 81.
-    Found 4-bit adder for signal <$add0004> created at line 83.
-    Found 4-bit adder for signal <$add0005> created at line 81.
-    Found 4-bit adder for signal <$add0006> created at line 83.
-    Found 4-bit adder for signal <$add0007> created at line 100.
-    Found 4-bit adder for signal <$add0008> created at line 102.
-    Found 4-bit adder for signal <$add0009> created at line 104.
-    Found 4-bit adder for signal <$add0010> created at line 106.
-    Found 4-bit adder for signal <$add0011> created at line 100.
-    Found 4-bit adder for signal <$add0012> created at line 102.
-    Found 4-bit adder for signal <$add0013> created at line 104.
-    Found 4-bit adder for signal <$add0014> created at line 106.
-    Found 4-bit adder for signal <$add0015> created at line 100.
-    Found 4-bit adder for signal <$add0016> created at line 102.
-    Found 4-bit adder for signal <$add0017> created at line 104.
-    Found 4-bit adder for signal <$add0018> created at line 106.
-    Found 4-bit adder for signal <$add0019> created at line 100.
-    Found 4-bit adder for signal <$add0020> created at line 102.
-    Found 4-bit adder for signal <$add0021> created at line 104.
-    Found 4-bit adder for signal <$add0022> created at line 106.
-    Found 4-bit adder for signal <$add0023> created at line 100.
-    Found 4-bit adder for signal <$add0024> created at line 102.
-    Found 4-bit adder for signal <$add0025> created at line 104.
-    Found 4-bit adder for signal <$add0026> created at line 106.
-    Found 4-bit adder for signal <$add0027> created at line 100.
-    Found 4-bit adder for signal <$add0028> created at line 102.
-    Found 4-bit adder for signal <$add0029> created at line 104.
-    Found 4-bit adder for signal <$add0030> created at line 106.
-    Found 4-bit adder for signal <$add0031> created at line 100.
-    Found 4-bit adder for signal <$add0032> created at line 102.
-    Found 4-bit adder for signal <$add0033> created at line 104.
-    Found 4-bit adder for signal <$add0034> created at line 106.
-    Found 4-bit adder for signal <$add0035> created at line 100.
-    Found 4-bit adder for signal <$add0036> created at line 102.
-    Found 4-bit adder for signal <$add0037> created at line 104.
-    Found 4-bit adder for signal <$add0038> created at line 106.
-    Found 4-bit adder for signal <$add0039> created at line 100.
-    Found 4-bit adder for signal <$add0040> created at line 102.
-    Found 4-bit adder for signal <$add0041> created at line 104.
-    Found 4-bit adder for signal <$add0042> created at line 106.
-    Found 4-bit adder for signal <$add0043> created at line 100.
-    Found 4-bit adder for signal <$add0044> created at line 102.
-    Found 4-bit adder for signal <$add0045> created at line 104.
-    Found 4-bit adder for signal <$add0046> created at line 106.
-    Found 4-bit adder for signal <$add0047> created at line 100.
-    Found 4-bit adder for signal <$add0048> created at line 102.
-    Found 4-bit adder for signal <$add0049> created at line 104.
-    Found 4-bit adder for signal <$add0050> created at line 106.
-    Found 4-bit adder for signal <$add0051> created at line 100.
-    Found 4-bit adder for signal <$add0052> created at line 102.
-    Found 4-bit adder for signal <$add0053> created at line 104.
-    Found 4-bit adder for signal <$add0054> created at line 106.
-    Found 4-bit adder for signal <$add0055> created at line 100.
-    Found 4-bit adder for signal <$add0056> created at line 102.
-    Found 4-bit adder for signal <$add0057> created at line 104.
-    Found 4-bit adder for signal <$add0058> created at line 106.
-    Found 4-bit adder for signal <$add0059> created at line 100.
-    Found 4-bit adder for signal <$add0060> created at line 102.
-    Found 4-bit adder for signal <$add0061> created at line 104.
-    Found 4-bit adder for signal <$add0062> created at line 106.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 80.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 80.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 80.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 82.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 80.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 82.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 80.
-    Found 7-bit 3-to-1 multiplexer for signal <disp$mux0000>.
+Synthesizing Unit <xdispDecoder>.
+    Related source file is "rtl/src/xdispDecoder.v".
+WARNING:Xst:1305 - Output <disp_select> is never assigned. Tied to value 0000.
+WARNING:Xst:1872 - Variable <i> is used but never assigned.
+    Found 16x8-bit ROM for signal <disp_value$mux0000>.
+    Found 16x8-bit ROM for signal <disp_value$mux0001>.
+    Found 16x8-bit ROM for signal <disp_value$mux0002>.
+    Found 8-bit 4-to-1 multiplexer for signal <disp_value>.
+    Found 4-bit adder for signal <$add0000> created at line 72.
+    Found 4-bit adder for signal <$add0001> created at line 72.
+    Found 4-bit adder for signal <$add0002> created at line 72.
+    Found 4-bit adder for signal <$add0003> created at line 72.
+    Found 4-bit adder for signal <$add0004> created at line 74.
+    Found 4-bit adder for signal <$add0005> created at line 72.
+    Found 4-bit adder for signal <$add0006> created at line 74.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 71.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 71.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 71.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 73.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 71.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 73.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 71.
     Found 16-bit up counter for signal <displayed_number>.
     Found 27-bit up counter for signal <one_second_counter>.
-    Found 27-bit comparator greatequal for signal <one_second_counter$cmp_ge0000> created at line 46.
+    Found 27-bit comparator greatequal for signal <one_second_counter$cmp_ge0000> created at line 37.
     Found 20-bit up counter for signal <refresh_counter>.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0000> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0001> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0002> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0003> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0004> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0005> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0006> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0007> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0008> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0009> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0010> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0011> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0012> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0013> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0014> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0015> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0016> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0017> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0018> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0019> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0020> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0021> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0022> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0023> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0024> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0025> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0026> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0027> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0028> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0029> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0030> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0031> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0032> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0033> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0034> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0035> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0036> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0037> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0038> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0039> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0040> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0041> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0042> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0043> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0044> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0045> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0046> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0047> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0048> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0049> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0050> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0051> created at line 99.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0052> created at line 105.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0053> created at line 103.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0054> created at line 101.
-    Found 4-bit comparator greatequal for signal <shifter$cmp_ge0055> created at line 99.
     Summary:
-	inferred   4 ROM(s).
+	inferred   3 ROM(s).
 	inferred   3 Counter(s).
-	inferred  63 Adder/Subtractor(s).
-	inferred  64 Comparator(s).
-	inferred   7 Multiplexer(s).
-Unit <disp_test> synthesized.
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred   8 Multiplexer(s).
+Unit <xdispDecoder> synthesized.
 
 
 Synthesizing Unit <xleds>.
@@ -400,7 +281,7 @@ Unit <xleds> synthesized.
 
 Synthesizing Unit <xtop>.
     Related source file is "rtl/src/xtop.v".
-WARNING:Xst:1306 - Output <Disp<7>> is never assigned.
+WARNING:Xst:647 - Input <Btn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 Unit <xtop> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -412,15 +293,14 @@ Macro Statistics
 # RAMs                                                 : 2
  16x32-bit single-port RAM                             : 1
  512x32-bit dual-port RAM                              : 1
-# ROMs                                                 : 4
- 10x7-bit ROM                                          : 3
- 4x4-bit ROM                                           : 1
-# Adders/Subtractors                                   : 70
+# ROMs                                                 : 3
+ 16x8-bit ROM                                          : 3
+# Adders/Subtractors                                   : 14
  1-bit adder                                           : 2
  32-bit adder                                          : 1
  32-bit addsub                                         : 2
  32-bit subtractor                                     : 1
- 4-bit adder                                           : 63
+ 4-bit adder                                           : 7
  9-bit adder                                           : 1
 # Counters                                             : 2
  20-bit up counter                                     : 1
@@ -430,15 +310,12 @@ Macro Statistics
  32-bit register                                       : 4
  8-bit register                                        : 1
  9-bit register                                        : 1
-# Latches                                              : 1
- 7-bit latch                                           : 1
-# Comparators                                          : 64
+# Comparators                                          : 8
  27-bit comparator greatequal                          : 1
- 4-bit comparator greatequal                           : 56
  4-bit comparator greater                              : 7
 # Multiplexers                                         : 5
  32-bit 4-to-1 multiplexer                             : 4
- 7-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -500,9 +377,8 @@ Macro Statistics
 # RAMs                                                 : 2
  16x32-bit single-port distributed RAM                 : 1
  512x32-bit dual-port block RAM                        : 1
-# ROMs                                                 : 4
- 10x7-bit ROM                                          : 3
- 4x4-bit ROM                                           : 1
+# ROMs                                                 : 3
+ 16x8-bit ROM                                          : 3
 # Adders/Subtractors                                   : 14
  1-bit adder                                           : 2
  32-bit adder                                          : 1
@@ -514,13 +390,11 @@ Macro Statistics
  20-bit up counter                                     : 1
 # Registers                                            : 84
  Flip-Flops                                            : 84
-# Latches                                              : 1
- 7-bit latch                                           : 1
 # Comparators                                          : 7
  4-bit comparator greater                              : 7
 # Multiplexers                                         : 5
  32-bit 4-to-1 multiplexer                             : 4
- 7-bit 3-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 # Xors                                                 : 5
  1-bit xor2                                            : 4
  32-bit xor2                                           : 1
@@ -537,9 +411,9 @@ Optimizing unit <xctrl> ...
 
 Optimizing unit <xregf> ...
 
-Optimizing unit <xleds> ...
+Optimizing unit <xdispDecoder> ...
 
-Optimizing unit <disp_test> ...
+Optimizing unit <xleds> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -578,39 +452,36 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 31
+# IOs                              : 35
 
 Cell Usage :
-# BELS                             : 1200
+# BELS                             : 1128
 #      GND                         : 1
 #      INV                         : 33
 #      LUT1                        : 28
-#      LUT2                        : 81
-#      LUT2_D                      : 1
-#      LUT2_L                      : 1
-#      LUT3                        : 94
+#      LUT2                        : 47
+#      LUT3                        : 97
 #      LUT3_D                      : 11
-#      LUT3_L                      : 37
-#      LUT4                        : 465
-#      LUT4_D                      : 60
-#      LUT4_L                      : 79
+#      LUT3_L                      : 17
+#      LUT4                        : 445
+#      LUT4_D                      : 74
+#      LUT4_L                      : 57
 #      MUXCY                       : 128
-#      MUXF5                       : 54
-#      MUXF6                       : 1
+#      MUXF5                       : 62
+#      MUXF6                       : 2
 #      VCC                         : 1
 #      XORCY                       : 125
-# FlipFlops/Latches                : 111
+# FlipFlops/Latches                : 104
 #      FDC                         : 29
 #      FDCE                        : 75
-#      LD                          : 7
 # RAMS                             : 33
 #      RAM16X1S                    : 32
 #      RAMB16_S36_S36              : 1
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 29
+# IO Buffers                       : 30
 #      IBUF                        : 9
-#      OBUF                        : 20
+#      OBUF                        : 21
 =========================================================================
 
 Device utilization summary:
@@ -618,14 +489,13 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      481  out of    960    50%  
+ Number of Slices:                      443  out of    960    46%  
  Number of Slice Flip Flops:            104  out of   1920     5%  
- Number of 4 input LUTs:                922  out of   1920    48%  
-    Number used as logic:               890
+ Number of 4 input LUTs:                841  out of   1920    43%  
+    Number used as logic:               809
     Number used as RAMs:                 32
- Number of IOs:                          31
- Number of bonded IOBs:                  30  out of     83    36%  
-    IOB Flip Flops:                       7
+ Number of IOs:                          35
+ Number of bonded IOBs:                  31  out of     83    37%  
  Number of BRAMs:                         1  out of      4    25%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -647,16 +517,11 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
---------------------------------------------------+--------------------------+-------+
-Clock Signal                                      | Clock buffer(FF name)    | Load  |
---------------------------------------------------+--------------------------+-------+
-clk                                               | BUFGP                    | 137   |
-disp_test/disp_not0001(disp_test/disp_not000179:O)| NONE(*)(disp_test/disp_6)| 7     |
---------------------------------------------------+--------------------------+-------+
-(*) This 1 clock signal(s) are generated by combinatorial logic,
-and XST is not able to identify which are the primary clock signals.
-Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
-INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 137   |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -670,10 +535,10 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 20.380ns (Maximum Frequency: 49.067MHz)
-   Minimum input arrival time before clock: 15.140ns
-   Maximum output required time after clock: 18.222ns
-   Maximum combinational path delay: No path found
+   Minimum period: 21.124ns (Maximum Frequency: 47.339MHz)
+   Minimum input arrival time before clock: 2.628ns
+   Maximum output required time after clock: 16.152ns
+   Maximum combinational path delay: 18.237ns
 
 Timing Detail:
 --------------
@@ -681,29 +546,33 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 20.380ns (frequency: 49.067MHz)
-  Total number of paths / destination ports: 6006317 / 415
+  Clock period: 21.124ns (frequency: 47.339MHz)
+  Total number of paths / destination ports: 6923446 / 415
 -------------------------------------------------------------------------
-Delay:               20.380ns (Levels of Logic = 41)
+Delay:               21.124ns (Levels of Logic = 45)
   Source:            ram/Mram_mem (RAM)
-  Destination:       controller/regC_2 (FF)
+  Destination:       controller/regA_31 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: ram/Mram_mem to controller/regC_2
+  Data Path: ram/Mram_mem to controller/regA_31
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16_S36_S36:CLKB->DOB30   74   2.800   1.450  ram/Mram_mem (instruction<30>)
+     RAMB16_S36_S36:CLKB->DOB28   73   2.800   1.450  ram/Mram_mem (instruction<28>)
      LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
-     LUT3_D:I2->O          2   0.704   0.622  controller/mem_addr<4>1_SW0 (N130)
-     LUT4:I0->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N852)
-     MUXF5:I0->O           5   0.321   0.637  controller/mem_sel121_SW0 (N46)
-     LUT4_D:I3->O          4   0.704   0.591  controller/mem_sel121_1 (controller/mem_sel121)
-     LUT4_D:I3->O         21   0.704   1.132  controller/mem_sel_1 (controller/mem_sel)
-     LUT4:I3->O            2   0.704   0.451  controller/operand<2>13 (controller/operand<2>13)
-     LUT4:I3->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<2> (controller/Maddsub_carry_res_n_1_lut<2>)
-     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
+     LUT3_D:I2->O          2   0.704   0.526  controller/mem_addr<5>1_SW0 (N148)
+     LUT4:I1->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N573)
+     MUXF5:I0->O           4   0.321   0.591  controller/mem_sel121_SW0 (N64)
+     LUT4_D:I3->O          2   0.704   0.451  controller/mem_sel121_1 (controller/mem_sel121)
+     LUT4:I3->O            2   0.704   0.451  addr_decoder/Mmux_data_to_rd1101_1 (addr_decoder/Mmux_data_to_rd1101)
+     LUT4:I3->O            1   0.704   0.000  controller/operand<0>111_SW0_G (N356)
+     MUXF5:I1->O           1   0.321   0.424  controller/operand<0>111_SW0 (N179)
+     LUT4:I3->O            4   0.704   0.622  controller/operand<0>30 (controller/operand<0>)
+     LUT3:I2->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<0> (controller/Maddsub_carry_res_n_1_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<0> (controller/Maddsub_carry_res_n_1_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<1> (controller/Maddsub_carry_res_n_1_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<3> (controller/Maddsub_carry_res_n_1_cy<3>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<4> (controller/Maddsub_carry_res_n_1_cy<4>)
      MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<5> (controller/Maddsub_carry_res_n_1_cy<5>)
@@ -734,67 +603,37 @@ Delay:               20.380ns (Levels of Logic = 41)
      XORCY:CI->O           1   0.804   0.499  controller/Maddsub_carry_res_n_1_xor<30> (controller/carry_res_n_1<30>)
      LUT2:I1->O            1   0.704   0.000  controller/Maddsub_adder_res_lut<30> (controller/Maddsub_adder_res_lut<30>)
      MUXCY:S->O            0   0.464   0.000  controller/Maddsub_adder_res_cy<30> (controller/Maddsub_adder_res_cy<30>)
-     XORCY:CI->O           2   0.804   0.482  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
-     LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
+     XORCY:CI->O           2   0.804   0.451  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
+     LUT4:I3->O            1   0.704   0.000  controller/alu_negative32 (controller/alu_negative)
      FDCE:D                    0.308          controller/regC_2
     ----------------------------------------
-    Total                     20.380ns (13.894ns logic, 6.486ns route)
-                                       (68.2% logic, 31.8% route)
+    Total                     21.124ns (15.037ns logic, 6.087ns route)
+                                       (71.2% logic, 28.8% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              2.611ns (Levels of Logic = 1)
-  Source:            Sw<1> (PAD)
-  Destination:       leds/led_1 (FF)
+Offset:              2.628ns (Levels of Logic = 1)
+  Source:            Sw<3> (PAD)
+  Destination:       leds/led_3 (FF)
   Destination Clock: clk rising
 
-  Data Path: Sw<1> to leds/led_1
+  Data Path: Sw<3> to leds/led_3
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            19   1.218   1.085  Sw_1_IBUF (Sw_1_IBUF)
-     FDCE:D                    0.308          leds/led_1
+     IBUF:I->O            20   1.218   1.102  Sw_3_IBUF (Sw_3_IBUF)
+     FDCE:D                    0.308          leds/led_3
     ----------------------------------------
-    Total                      2.611ns (1.526ns logic, 1.085ns route)
-                                       (58.4% logic, 41.6% route)
-
-=========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'disp_test/disp_not0001'
-  Total number of paths / destination ports: 5508 / 7
--------------------------------------------------------------------------
-Offset:              15.140ns (Levels of Logic = 12)
-  Source:            Sw<7> (PAD)
-  Destination:       disp_test/disp_0 (LATCH)
-  Destination Clock: disp_test/disp_not0001 falling
-
-  Data Path: Sw<7> to disp_test/disp_0
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     IBUF:I->O            12   1.218   1.136  Sw_7_IBUF (Sw_7_IBUF)
-     LUT4:I0->O            1   0.704   0.000  disp_test/bcd_mux0008_F (N772)
-     MUXF5:I0->O          16   0.321   1.113  disp_test/bcd_mux0008 (disp_test/Madd__add0004_cy<0>)
-     LUT2:I1->O            7   0.704   0.712  disp_test/bcd_mux002411 (disp_test/N0)
-     LUT4:I3->O           14   0.704   1.175  disp_test/bcd_mux00191 (disp_test/bcd_mux0019)
-     LUT2:I0->O            2   0.704   0.482  disp_test/bcd_mux0024211 (disp_test/N17)
-     LUT4:I2->O            1   0.704   0.000  disp_test/bcd_mux00244 (disp_test/bcd_mux00243)
-     MUXF5:I0->O           1   0.321   0.000  disp_test/bcd_mux0024_f5_0 (disp_test/bcd_mux0024_f51)
-     MUXF6:I0->O          12   0.521   1.040  disp_test/bcd_mux0024_f6 (disp_test/bcd<4>)
-     LUT4:I1->O            3   0.704   0.706  disp_test/Mmux_disp_mux00002189 (disp_test/N6)
-     LUT4:I0->O            1   0.704   0.455  disp_test/Mmux_disp_mux0000269 (disp_test/Mmux_disp_mux0000269)
-     LUT4:I2->O            1   0.704   0.000  disp_test/Mmux_disp_mux000021361 (disp_test/disp_mux0000<0>)
-     LD:D                      0.308          disp_test/disp_0
-    ----------------------------------------
-    Total                     15.140ns (8.321ns logic, 6.819ns route)
-                                       (55.0% logic, 45.0% route)
+    Total                      2.628ns (1.526ns logic, 1.102ns route)
+                                       (58.1% logic, 41.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 190 / 12
+  Total number of paths / destination ports: 240 / 16
 -------------------------------------------------------------------------
-Offset:              18.222ns (Levels of Logic = 9)
+Offset:              16.152ns (Levels of Logic = 7)
   Source:            ram/Mram_mem (RAM)
   Destination:       trap (PAD)
   Source Clock:      clk rising
@@ -803,51 +642,59 @@ Offset:              18.222ns (Levels of Logic = 9)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16_S36_S36:CLKB->DOB30   74   2.800   1.450  ram/Mram_mem (instruction<30>)
-     LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
-     LUT3_D:I2->O          2   0.704   0.622  controller/mem_addr<4>1_SW0 (N130)
-     LUT4:I0->O            1   0.704   0.000  controller/mem_sel121_SW0_F (N852)
-     MUXF5:I0->O           5   0.321   0.808  controller/mem_sel121_SW0 (N46)
-     LUT4_D:I0->O         60   0.704   1.275  controller/mem_sel121 (controller/N01)
-     LUT4_D:I3->O         11   0.704   1.108  controller/mem_sel (data_sel)
-     LUT4:I0->O            1   0.704   0.595  addr_decoder/trap_sel67_SW0 (N694)
-     LUT4:I0->O            1   0.704   0.420  addr_decoder/trap_sel67 (trap_OBUF)
+     RAMB16_S36_S36:CLKB->DOB28   73   2.800   1.450  ram/Mram_mem (instruction<28>)
+     LUT4_D:I0->O         43   0.704   1.301  controller/imm_cmp_eq00001 (controller/imm_cmp_eq0000)
+     LUT3_D:I2->O          1   0.704   0.455  controller/mem_addr<1>1_SW0 (N156)
+     LUT3:I2->O           65   0.704   1.277  controller/mem_addr<1>1 (data_addr<1>)
+     LUT4:I3->O            1   0.704   0.499  addr_decoder/trap_sel30 (addr_decoder/trap_sel30)
+     LUT4:I1->O            1   0.704   0.455  addr_decoder/trap_sel39 (addr_decoder/trap_sel39)
+     LUT3:I2->O            1   0.704   0.420  addr_decoder/trap_sel67 (trap_OBUF)
      OBUF:I->O                 3.272          trap_OBUF (trap)
     ----------------------------------------
-    Total                     18.222ns (11.321ns logic, 6.901ns route)
-                                       (62.1% logic, 37.9% route)
+    Total                     16.152ns (10.296ns logic, 5.856ns route)
+                                       (63.7% logic, 36.3% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'disp_test/disp_not0001'
-  Total number of paths / destination ports: 7 / 7
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 9310 / 7
 -------------------------------------------------------------------------
-Offset:              4.368ns (Levels of Logic = 1)
-  Source:            disp_test/disp_6 (LATCH)
-  Destination:       Disp<6> (PAD)
-  Source Clock:      disp_test/disp_not0001 falling
+Delay:               18.237ns (Levels of Logic = 13)
+  Source:            Sw<7> (PAD)
+  Destination:       Disp<3> (PAD)
 
-  Data Path: disp_test/disp_6 to Disp<6>
+  Data Path: Sw<7> to Disp<3>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     LD:G->Q               1   0.676   0.420  disp_test/disp_6 (disp_test/disp_6)
-     OBUF:I->O                 3.272          Disp_6_OBUF (Disp<6>)
+     IBUF:I->O            15   1.218   1.192  Sw_7_IBUF (Sw_7_IBUF)
+     LUT4:I0->O            1   0.704   0.000  displayDecoder/bcd_cmp_gt0002_F (N521)
+     MUXF5:I0->O           2   0.321   0.622  displayDecoder/bcd_cmp_gt0002 (displayDecoder/bcd_cmp_gt0002)
+     LUT2:I0->O            6   0.704   0.704  displayDecoder/bcd_mux00262_SW0 (N27)
+     LUT4:I2->O            8   0.704   0.932  displayDecoder/bcd_mux0016 (displayDecoder/Madd__add0006_cy<0>)
+     LUT4:I0->O            6   0.704   0.748  displayDecoder/bcd_mux0021 (displayDecoder/bcd<7>)
+     LUT2:I1->O            3   0.704   0.706  displayDecoder/Mmux_disp_value1471 (displayDecoder/N46)
+     LUT4:I0->O            1   0.704   0.424  displayDecoder/Mmux_disp_value8259_SW0 (N435)
+     LUT4:I3->O            1   0.704   0.455  displayDecoder/Mmux_disp_value8259 (displayDecoder/Mmux_disp_value8259)
+     LUT3:I2->O            3   0.704   0.566  displayDecoder/Mmux_disp_value82103 (displayDecoder/N9)
+     LUT3:I2->O            1   0.704   0.000  displayDecoder/Mmux_disp_value860_F (N563)
+     MUXF5:I0->O           1   0.321   0.420  displayDecoder/Mmux_disp_value860 (Disp_3_OBUF)
+     OBUF:I->O                 3.272          Disp_3_OBUF (Disp<3>)
     ----------------------------------------
-    Total                      4.368ns (3.948ns logic, 0.420ns route)
-                                       (90.4% logic, 9.6% route)
+    Total                     18.237ns (11.468ns logic, 6.769ns route)
+                                       (62.9% logic, 37.1% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 12.00 secs
-Total CPU time to Xst completion: 11.87 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 10.62 secs
  
 --> 
 
 
-Total memory usage is 524988 kilobytes
+Total memory usage is 523608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    8 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
 

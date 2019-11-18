@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Nov 17 20:39:00 2019
+// Written by: Map P.20131013 on Mon Nov 18 08:27:10 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -75,19 +75,28 @@ TIMEGRP clk = BEL "controller/regB_31" BEL "controller/regB_30" BEL
         "regf/Mram_regf10" BEL "regf/Mram_regf9" BEL "regf/Mram_regf8" BEL
         "regf/Mram_regf7" BEL "regf/Mram_regf6" BEL "regf/Mram_regf5" BEL
         "regf/Mram_regf4" BEL "regf/Mram_regf3" BEL "regf/Mram_regf2" BEL
-        "regf/Mram_regf1" BEL "leds/led_7" BEL "leds/led_6" BEL "leds/led_5"
-        BEL "leds/led_4" BEL "leds/led_3" BEL "leds/led_2" BEL "leds/led_1"
-        BEL "leds/led_0" BEL "disp_test/refresh_counter_19" BEL
-        "disp_test/refresh_counter_18" BEL "disp_test/refresh_counter_17" BEL
-        "disp_test/refresh_counter_16" BEL "disp_test/refresh_counter_15" BEL
-        "disp_test/refresh_counter_14" BEL "disp_test/refresh_counter_13" BEL
-        "disp_test/refresh_counter_12" BEL "disp_test/refresh_counter_11" BEL
-        "disp_test/refresh_counter_10" BEL "disp_test/refresh_counter_9" BEL
-        "disp_test/refresh_counter_8" BEL "disp_test/refresh_counter_7" BEL
-        "disp_test/refresh_counter_6" BEL "disp_test/refresh_counter_5" BEL
-        "disp_test/refresh_counter_4" BEL "disp_test/refresh_counter_3" BEL
-        "disp_test/refresh_counter_2" BEL "disp_test/refresh_counter_1" BEL
-        "disp_test/refresh_counter_0" PIN "ram/Mram_mem.A_pins<10>" PIN
+        "regf/Mram_regf1" BEL "displayDecoder/refresh_counter_19" BEL
+        "displayDecoder/refresh_counter_18" BEL
+        "displayDecoder/refresh_counter_17" BEL
+        "displayDecoder/refresh_counter_16" BEL
+        "displayDecoder/refresh_counter_15" BEL
+        "displayDecoder/refresh_counter_14" BEL
+        "displayDecoder/refresh_counter_13" BEL
+        "displayDecoder/refresh_counter_12" BEL
+        "displayDecoder/refresh_counter_11" BEL
+        "displayDecoder/refresh_counter_10" BEL
+        "displayDecoder/refresh_counter_9" BEL
+        "displayDecoder/refresh_counter_8" BEL
+        "displayDecoder/refresh_counter_7" BEL
+        "displayDecoder/refresh_counter_6" BEL
+        "displayDecoder/refresh_counter_5" BEL
+        "displayDecoder/refresh_counter_4" BEL
+        "displayDecoder/refresh_counter_3" BEL
+        "displayDecoder/refresh_counter_2" BEL
+        "displayDecoder/refresh_counter_1" BEL
+        "displayDecoder/refresh_counter_0" BEL "leds/led_7" BEL "leds/led_6"
+        BEL "leds/led_5" BEL "leds/led_4" BEL "leds/led_3" BEL "leds/led_2"
+        BEL "leds/led_1" BEL "leds/led_0" PIN "ram/Mram_mem.A_pins<10>" PIN
         "ram/Mram_mem.B_pins<10>" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
         "clk_BUFGP/BUFG";
 TS_clkin = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;

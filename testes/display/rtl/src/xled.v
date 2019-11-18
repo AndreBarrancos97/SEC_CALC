@@ -10,10 +10,9 @@ module xleds (
 		);
 
  always @(posedge clk,posedge reset)
-   if (reset)begin
+   if (reset)
 	  led <= 8'b0;
-	  end
    else if(led_sel)
      led <= sw;
-
+	  
 endmodule
