@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="HDLCompiler" num="281" delta="unknown" >"/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v" Line 2: Cannot open include file &quot;<arg fmt="%s" index="1">xdefs.vh</arg>&quot;.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="870" delta="unknown" >"/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v" Line 8: Macro &lt;<arg fmt="%s" index="1">REGF_ADDR_W</arg>&gt; is not defined.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="870" delta="unknown" >"/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v" Line 9: Macro &lt;<arg fmt="%s" index="1">DATA_W</arg>&gt; is not defined.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="598" delta="unknown" >"/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v" Line 4: Module &lt;<arg fmt="%s" index="1">xregf</arg>&gt; ignored due to previous errors.
+</msg>
+
+</messages>
+

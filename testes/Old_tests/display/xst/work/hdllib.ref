@@ -1,0 +1,10 @@
+MO xdispDecoder NULL rtl/src/xdispDecoder.v vlg6E/xdisp_decoder.bin 1575321323
+MO xdisplay NULL rtl/src/xdisplay.v vlg36/xdisplay.bin 1574018919
+MO xtop NULL rtl/src/xtop.v vlg07/xtop.bin 1575321323
+MO xctrl NULL rtl/src/xctrl.v vlg49/xctrl.bin 1575321323
+MO xaddr_decoder NULL rtl/src/xaddr_decoder.v vlg54/xaddr__decoder.bin 1575321323
+MO xram NULL rtl/src/xram.v vlg0C/xram.bin 1575321323
+MO xregf NULL rtl/src/xregf.v vlg68/xregf.bin 1575321323
+MO disp_test NULL rtl/src/test_display.v vlg37/disp__test.bin 1574082113
+MO xleds NULL rtl/src/xled.v vlg78/xleds.bin 1575321323
+MO test_display NULL rtl/src/test_display.v vlg05/test__display.bin 1574019095

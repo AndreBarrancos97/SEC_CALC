@@ -1,0 +1,8 @@
+    rdw BUTTON_BASE
+    wrw LED_BASE
+    ldi 0
+    ldi 0x35
+    wrw 0x7fff
+    ldi 0
+end beqi end
+    nop

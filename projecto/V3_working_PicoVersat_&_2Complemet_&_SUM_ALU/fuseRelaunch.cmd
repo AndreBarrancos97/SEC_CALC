@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/xtop_isim_beh.exe" -prj "/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/xtop_beh.prj" "work.xtop" "work.glbl" 

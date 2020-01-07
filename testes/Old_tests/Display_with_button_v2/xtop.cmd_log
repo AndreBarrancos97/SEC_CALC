@@ -1,0 +1,39 @@
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I xtop.ngc xtop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o xtop_map.ncd xtop.ngd xtop.pcf 
+par -w -intstyle ise -ol high -mt off xtop_map.ncd xtop.ncd xtop.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml xtop.twx xtop.ncd -o xtop.twr xtop.pcf 
+bitgen -intstyle ise -f xtop.ut xtop.ncd 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I xtop.ngc xtop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o xtop_map.ncd xtop.ngd xtop.pcf 
+par -w -intstyle ise -ol high -mt off xtop_map.ncd xtop.ncd xtop.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml xtop.twx xtop.ncd -o xtop.twr xtop.pcf 
+bitgen -intstyle ise -f xtop.ut xtop.ncd 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I xtop.ngc xtop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o xtop_map.ncd xtop.ngd xtop.pcf 
+par -w -intstyle ise -ol high -mt off xtop_map.ncd xtop.ncd xtop.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml xtop.twx xtop.ncd -o xtop.twr xtop.pcf 
+bitgen -intstyle ise -f xtop.ut xtop.ncd 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xa7a100t-csg324-2I xtop.ngc xtop.ngd  
+map -intstyle ise -p xa7a100t-csg324-2I -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o xtop_map.ncd xtop.ngd xtop.pcf 
+par -w -intstyle ise -ol high -mt off xtop_map.ncd xtop.ncd xtop.pcf 
+trce -intstyle ise -v 3 -s 2I -n 3 -fastpaths -xml xtop.twx xtop.ncd -o xtop.twr xtop.pcf 
+bitgen -intstyle ise -f xtop.ut xtop.ncd 
+xst -intstyle ise -ifn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.xst" -ofn "/home/andre/Documents/SEC_CALC/testes/Display_with_button/xtop.syr" 

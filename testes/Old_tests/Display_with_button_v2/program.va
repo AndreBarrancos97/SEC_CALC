@@ -1,0 +1,11 @@
+begin1    rdw BTN3_BASE
+    	  beqi begin1
+          nop
+	  rdw SW_BASE
+          wrw LED0_BASE
+    	  bneqi begin1
+    ldi 0x35
+    wrw 0x7fff
+    ldi 0
+end beqi end
+    nop

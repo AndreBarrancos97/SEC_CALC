@@ -1,0 +1,6 @@
+verilog work "rtl/src/xregf.v"
+verilog work "rtl/src/xram.v"
+verilog work "rtl/src/xdispDecoder.v"
+verilog work "rtl/src/xctrl.v"
+verilog work "rtl/src/xaddr_decoder.v"
+verilog work "rtl/src/xtop.v"
