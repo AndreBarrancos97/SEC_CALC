@@ -12,12 +12,6 @@ module xtop_tb;
    //
    reg clk;
    reg rst;
-   reg Btn3;
-   reg Btn2;
-   reg [7:0] Sw;
-   wire [7:0]		  Led;
-   wire [7:0]	  Disp;
-   wire [3:0]   Disp_sel;   
    wire trap;
    
 `ifdef EXT_BASE
@@ -36,15 +30,9 @@ module xtop_tb;
    
    // Instantiate the Unit Under Test (UUT)
    xtop uut (
-	          .clk(clk),
+	     .clk(clk),
              .rst(rst),
-	          .Btn3(Btn3),
-             .Btn2(Btn2),
-	         .Sw(Sw[7:0]),
-             .trap(trap),
-	     //.Led(Led[7:0]),
-             .Disp(Disp[7:0]),
-             .Disp_sel(Disp_sel[3:0])
+             .trap(trap)
 	     
 `ifdef EXT_BASE
    	     // external parallel interface
@@ -65,10 +53,8 @@ module xtop_tb;
       // Initialize Inputs
       clk = 1;
       rst = 0;  
-      Sw = 8'b01010010; // a e b
-      Btn3 = 1'b1;
-      Btn2 = 1'b0;
-      // assert reset for 1 clock cycle
+      
+     // assert reset for 1 clock cycle
       #(clk_period+1)
       rst = 1;
       #clk_period;
@@ -79,14 +65,6 @@ module xtop_tb;
       //
       start_time = $time;
 
-      #50
-	   Sw = 8'b00000100;
-      Btn3 = 1'b0;
-      Btn2 = 1'b1;
-
-      
-      #500
-      $finish;
 
       //
       // Dump reg file data to outfile

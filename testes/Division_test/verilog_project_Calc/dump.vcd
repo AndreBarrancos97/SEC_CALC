@@ -1,0 +1,1270 @@
+$date
+	Wed Jan  8 11:56:52 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module div_tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 4 " D [3:0] $end
+$var reg 1 # clk $end
+$var reg 4 $ d [3:0] $end
+$var reg 1 % rst $end
+$var reg 1 & start $end
+$scope module div1 $end
+$var wire 4 ' a [3:0] $end
+$var wire 4 ( b [3:0] $end
+$var wire 1 # clk $end
+$var wire 1 % rst $end
+$var wire 1 & start $end
+$var wire 4 ) second_nr_aux [3:0] $end
+$var wire 4 * resto [3:0] $end
+$var wire 4 + quociente_XOR [3:0] $end
+$var wire 4 , quociente [3:0] $end
+$var wire 1 - multiply_done $end
+$var wire 4 . first_nr_aux [3:0] $end
+$var wire 1 / done_valid_xor $end
+$var wire 1 0 done_valid $end
+$var wire 1 1 done_division $end
+$var wire 1 2 done $end
+$var reg 4 3 D_aux [3:0] $end
+$var reg 8 4 aux_sumy_v2 [7:0] $end
+$var reg 1 5 complement_result_sel $end
+$var reg 4 6 counter [3:0] $end
+$var reg 4 7 d_aux [3:0] $end
+$var reg 4 8 q [3:0] $end
+$var reg 1 9 start_aux $end
+$scope module div1 $end
+$var wire 4 : D [3:0] $end
+$var wire 1 # clk $end
+$var wire 4 ; d [3:0] $end
+$var wire 1 % rst $end
+$var wire 1 9 start $end
+$var wire 1 0 valid $end
+$var wire 4 < r [3:0] $end
+$var reg 8 = Dext [7:0] $end
+$var reg 3 > cnt [2:0] $end
+$var reg 4 ? q [3:0] $end
+$upscope $end
+$scope module multiply_comple2 $end
+$var wire 1 @ ci $end
+$var wire 1 # clk $end
+$var wire 1 A complement1_sel $end
+$var wire 4 B dumb_0 [3:0] $end
+$var wire 4 C first_nr_reg [3:0] $end
+$var wire 1 % rst $end
+$var wire 4 D second_nr_reg [3:0] $end
+$var wire 4 E second_nr_aux [3:0] $end
+$var wire 4 F first_nr_aux [3:0] $end
+$var wire 1 G complement1_finish_nr2 $end
+$var wire 1 H complement1_finish_nr1 $end
+$var reg 1 I complement1_finish $end
+$var reg 4 J first_nr [3:0] $end
+$var reg 4 K second_nr [3:0] $end
+$scope module division_complement_first_nr $end
+$var wire 4 L a [3:0] $end
+$var wire 4 M a_xor [3:0] $end
+$var wire 4 N aux_xor [3:0] $end
+$var wire 4 O b [3:0] $end
+$var wire 1 @ ci $end
+$var wire 1 # clk $end
+$var wire 1 P co $end
+$var wire 1 A complement1_sel $end
+$var wire 4 Q dumby [3:0] $end
+$var wire 1 % rst $end
+$var wire 4 R sum_aux_v2 [3:0] $end
+$var wire 4 S sum_aux [3:0] $end
+$var wire 1 T aux3 $end
+$var wire 1 U aux2 $end
+$var wire 1 V aux1 $end
+$var reg 1 H complement1_finish $end
+$var reg 4 W sum [3:0] $end
+$scope module adder0 $end
+$var wire 1 X a $end
+$var wire 1 Y b $end
+$var wire 1 @ ci $end
+$var wire 1 # clk $end
+$var wire 1 V co $end
+$var wire 1 Z out_and1 $end
+$var wire 1 [ out_and2 $end
+$var wire 1 \ out_xor $end
+$var wire 1 % rst $end
+$var wire 1 ] sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 ^ a $end
+$var wire 1 _ b $end
+$var wire 1 V ci $end
+$var wire 1 # clk $end
+$var wire 1 U co $end
+$var wire 1 ` out_and1 $end
+$var wire 1 a out_and2 $end
+$var wire 1 b out_xor $end
+$var wire 1 % rst $end
+$var wire 1 c sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 d a $end
+$var wire 1 e b $end
+$var wire 1 U ci $end
+$var wire 1 # clk $end
+$var wire 1 T co $end
+$var wire 1 f out_and1 $end
+$var wire 1 g out_and2 $end
+$var wire 1 h out_xor $end
+$var wire 1 % rst $end
+$var wire 1 i sum $end
+$upscope $end
+$upscope $end
+$scope module division_complement_second_nr $end
+$var wire 4 j a [3:0] $end
+$var wire 4 k a_xor [3:0] $end
+$var wire 4 l aux_xor [3:0] $end
+$var wire 4 m b [3:0] $end
+$var wire 1 @ ci $end
+$var wire 1 # clk $end
+$var wire 1 n co $end
+$var wire 1 A complement1_sel $end
+$var wire 4 o dumby [3:0] $end
+$var wire 1 % rst $end
+$var wire 4 p sum_aux_v2 [3:0] $end
+$var wire 4 q sum_aux [3:0] $end
+$var wire 1 r aux3 $end
+$var wire 1 s aux2 $end
+$var wire 1 t aux1 $end
+$var reg 1 G complement1_finish $end
+$var reg 4 u sum [3:0] $end
+$scope module adder0 $end
+$var wire 1 v a $end
+$var wire 1 w b $end
+$var wire 1 @ ci $end
+$var wire 1 # clk $end
+$var wire 1 t co $end
+$var wire 1 x out_and1 $end
+$var wire 1 y out_and2 $end
+$var wire 1 z out_xor $end
+$var wire 1 % rst $end
+$var wire 1 { sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 | a $end
+$var wire 1 } b $end
+$var wire 1 t ci $end
+$var wire 1 # clk $end
+$var wire 1 s co $end
+$var wire 1 ~ out_and1 $end
+$var wire 1 !" out_and2 $end
+$var wire 1 "" out_xor $end
+$var wire 1 % rst $end
+$var wire 1 #" sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 $" a $end
+$var wire 1 %" b $end
+$var wire 1 s ci $end
+$var wire 1 # clk $end
+$var wire 1 r co $end
+$var wire 1 &" out_and1 $end
+$var wire 1 '" out_and2 $end
+$var wire 1 (" out_xor $end
+$var wire 1 % rst $end
+$var wire 1 )" sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module result_div $end
+$var wire 4 *" a [3:0] $end
+$var wire 4 +" a_xor [3:0] $end
+$var wire 4 ," aux_xor [3:0] $end
+$var wire 4 -" b [3:0] $end
+$var wire 1 ." ci $end
+$var wire 1 # clk $end
+$var wire 1 /" co $end
+$var wire 1 0 complement1_sel $end
+$var wire 4 0" dumby [3:0] $end
+$var wire 1 % rst $end
+$var wire 4 1" sum_aux_v2 [3:0] $end
+$var wire 4 2" sum_aux [3:0] $end
+$var wire 1 3" aux3 $end
+$var wire 1 4" aux2 $end
+$var wire 1 5" aux1 $end
+$var reg 1 6" complement1_finish $end
+$var reg 4 7" sum [3:0] $end
+$scope module adder0 $end
+$var wire 1 8" a $end
+$var wire 1 9" b $end
+$var wire 1 ." ci $end
+$var wire 1 # clk $end
+$var wire 1 5" co $end
+$var wire 1 :" out_and1 $end
+$var wire 1 ;" out_and2 $end
+$var wire 1 <" out_xor $end
+$var wire 1 % rst $end
+$var wire 1 =" sum $end
+$upscope $end
+$scope module adder1 $end
+$var wire 1 >" a $end
+$var wire 1 ?" b $end
+$var wire 1 5" ci $end
+$var wire 1 # clk $end
+$var wire 1 4" co $end
+$var wire 1 @" out_and1 $end
+$var wire 1 A" out_and2 $end
+$var wire 1 B" out_xor $end
+$var wire 1 % rst $end
+$var wire 1 C" sum $end
+$upscope $end
+$scope module adder2 $end
+$var wire 1 D" a $end
+$var wire 1 E" b $end
+$var wire 1 4" ci $end
+$var wire 1 # clk $end
+$var wire 1 3" co $end
+$var wire 1 F" out_and1 $end
+$var wire 1 G" out_and2 $end
+$var wire 1 H" out_xor $end
+$var wire 1 % rst $end
+$var wire 1 I" sum $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+xI"
+xH"
+0G"
+xF"
+0E"
+xD"
+xC"
+xB"
+0A"
+x@"
+0?"
+x>"
+x="
+x<"
+0;"
+x:"
+09"
+x8"
+b0 7"
+06"
+x5"
+x4"
+x3"
+bzxxx 2"
+b0xxx 1"
+b0 0"
+z/"
+1."
+b0 -"
+b1111 ,"
+b0xxx +"
+b1xxx *"
+1)"
+1("
+0'"
+0&"
+0%"
+1$"
+1#"
+0""
+0!"
+0~
+0}
+0|
+0{
+1z
+0y
+1x
+0w
+1v
+b10 u
+1t
+0s
+0r
+bz110 q
+b110 p
+b0 o
+zn
+b0 m
+b1111 l
+b1101 k
+b10 j
+1i
+0h
+0g
+0f
+0e
+0d
+0c
+1b
+0a
+1`
+0_
+1^
+0]
+1\
+0[
+1Z
+0Y
+1X
+b100 W
+1V
+1U
+0T
+bz100 S
+b100 R
+b0 Q
+zP
+b0 O
+b1111 N
+b1011 M
+b100 L
+bx K
+bx J
+xI
+1H
+1G
+b100 F
+b10 E
+b10 D
+b100 C
+b0 B
+1A
+1@
+bx ?
+bx >
+bx =
+bx <
+bx ;
+bx :
+09
+bx 8
+bx 7
+b100 6
+15
+b0 4
+bx 3
+02
+01
+x0
+0/
+bx .
+0-
+bx ,
+b0 +
+bx *
+bx )
+b10 (
+b100 '
+0&
+1%
+b10 $
+1#
+b100 "
+bx !
+$end
+#10000
+0#
+#20000
+b10 )
+b10 K
+b100 .
+b100 J
+1I
+1G
+b10 E
+b10 u
+1H
+b100 F
+b100 W
+1#
+#30000
+0#
+#40000
+b0 6
+1#
+1&
+0%
+#50000
+0#
+0&
+#60000
+b1 6
+1#
+#70000
+0#
+#80000
+b10 6
+19
+b10 7
+b10 ;
+b100 3
+b100 :
+1#
+#90000
+0#
+#100000
+0C"
+0I"
+05"
+b1 1"
+04"
+03"
+0:"
+bz001 2"
+1="
+0@"
+0F"
+0<"
+0B"
+0H"
+08"
+0>"
+0D"
+b0 +"
+b1111 *"
+09
+b11 6
+00
+b100 >
+b1111 ,
+b1111 ?
+1#
+#110000
+0#
+#120000
+b100 *
+b100 <
+b11 >
+b100 =
+b100 6
+1#
+#130000
+0#
+#140000
+b101 6
+b10 >
+b111 ,
+b111 ?
+1#
+#150000
+0#
+#160000
+b101 1"
+bz101 2"
+1I"
+1H"
+1D"
+b100 +"
+b1011 *"
+b1 >
+b11 ,
+b11 ?
+b110 6
+1#
+#170000
+0#
+#180000
+b0 *
+b0 <
+12
+b111 6
+b0 >
+b0 =
+1#
+#190000
+0#
+#200000
+1C"
+15"
+b110 1"
+1:"
+bz110 2"
+0="
+1<"
+18"
+b101 +"
+b1010 *"
+10
+b111 >
+b10 ,
+b10 ?
+1-
+02
+b1000 6
+1#
+#210000
+0#
+#220000
+1/
+0-
+b1001 6
+16"
+b110 +
+b110 7"
+1#
+#230000
+0#
+#240000
+11
+0/
+b1010 6
+b10 !
+b10 8
+1#
+#250000
+0#
+#260000
+01
+b1011 6
+1#
+#270000
+0#
+#280000
+1#
+#290000
+0#
+#300000
+1#
+#310000
+0#
+#320000
+1#
+#330000
+0#
+#340000
+1#
+#350000
+0#
+#360000
+1#
+#370000
+0#
+#380000
+1#
+#390000
+0#
+#400000
+1#
+#410000
+0#
+#420000
+1#
+#430000
+0#
+#440000
+1#
+#450000
+1T
+b0 R
+1f
+bz000 S
+0i
+1h
+1d
+b1111 M
+0#
+b0 "
+b0 '
+b0 C
+b0 L
+#460000
+b0 F
+b0 W
+1#
+#470000
+0#
+#480000
+b0 .
+b0 J
+1#
+#490000
+0#
+#500000
+1#
+#510000
+0#
+#520000
+1#
+#530000
+0#
+#540000
+1#
+#550000
+0#
+1&
+#560000
+b0 6
+1#
+#570000
+0#
+#580000
+1#
+#590000
+0#
+#600000
+1#
+#610000
+0#
+#620000
+1#
+#630000
+0#
+#640000
+1#
+#650000
+0#
+0&
+#660000
+b1 6
+1#
+#670000
+0#
+#680000
+b10 6
+19
+b0 3
+b0 :
+1#
+#690000
+0#
+#700000
+0C"
+05"
+b1 1"
+0:"
+1="
+bz001 2"
+0I"
+0<"
+0H"
+08"
+0D"
+b0 +"
+b1111 *"
+09
+b11 6
+00
+b100 >
+b1111 ,
+b1111 ?
+1#
+#710000
+0#
+#720000
+b11 >
+b100 6
+1#
+#730000
+0#
+#740000
+b101 6
+b10 >
+b111 ,
+b111 ?
+1#
+#750000
+0#
+#760000
+b101 1"
+bz101 2"
+1I"
+1H"
+1D"
+b100 +"
+b1011 *"
+b1 >
+b11 ,
+b11 ?
+b110 6
+1#
+#770000
+0#
+#780000
+b111 1"
+bz111 2"
+1C"
+1B"
+1>"
+b110 +"
+b1001 *"
+12
+b111 6
+b0 >
+b1 ,
+b1 ?
+1#
+#790000
+0#
+#800000
+13"
+1F"
+0I"
+14"
+1@"
+0C"
+15"
+b0 1"
+1:"
+bz000 2"
+0="
+1<"
+18"
+b111 +"
+b1000 *"
+10
+b111 >
+b0 ,
+b0 ?
+1-
+02
+b1000 6
+1#
+#810000
+0#
+#820000
+1/
+0-
+b1001 6
+b0 +
+b0 7"
+1#
+#830000
+0#
+#840000
+11
+0/
+b1010 6
+b0 !
+b0 8
+1#
+#850000
+0#
+#860000
+01
+b1011 6
+1#
+#870000
+0#
+#880000
+1#
+#890000
+0#
+#900000
+1#
+#910000
+0#
+#920000
+1#
+#930000
+0#
+#940000
+1#
+#950000
+0#
+#960000
+1#
+#970000
+0#
+#980000
+1#
+#990000
+0#
+#1000000
+1#
+#1010000
+0#
+#1020000
+1#
+#1030000
+0#
+#1040000
+1#
+#1050000
+0T
+0f
+1i
+0U
+0`
+1c
+0V
+b111 R
+0Z
+bz111 S
+1]
+0\
+0X
+b110 M
+0#
+b1001 "
+b1001 '
+b1001 C
+b1001 L
+#1060000
+b111 F
+b111 W
+1#
+#1070000
+0#
+#1080000
+b111 .
+b111 J
+1#
+#1090000
+0#
+#1100000
+1#
+#1110000
+0#
+#1120000
+1#
+#1130000
+0#
+#1140000
+1#
+#1150000
+0#
+1&
+#1160000
+b0 6
+1#
+#1170000
+0#
+#1180000
+1#
+#1190000
+0#
+#1200000
+1#
+#1210000
+0#
+#1220000
+1#
+#1230000
+0#
+#1240000
+1#
+#1250000
+0#
+0&
+#1260000
+b1 6
+1#
+#1270000
+0#
+#1280000
+b10 6
+19
+b111 3
+b111 :
+1#
+#1290000
+0#
+#1300000
+05"
+04"
+03"
+b1 1"
+0:"
+1="
+0@"
+0C"
+0F"
+bz001 2"
+0I"
+0<"
+0B"
+0H"
+08"
+0>"
+0D"
+b0 +"
+b1111 *"
+09
+b11 6
+00
+b100 >
+b1111 ,
+b1111 ?
+1#
+#1310000
+0#
+#1320000
+b111 *
+b111 <
+b11 >
+b111 =
+b100 6
+1#
+#1330000
+0#
+#1340000
+b101 6
+b10 >
+b111 ,
+b111 ?
+1#
+#1350000
+0#
+#1360000
+b101 1"
+bz101 2"
+1I"
+1H"
+1D"
+b100 +"
+b1011 *"
+b1 >
+b11 ,
+b11 ?
+b110 6
+1#
+#1370000
+0#
+#1380000
+b11 *
+b11 <
+12
+b111 6
+b0 >
+b11 =
+1#
+#1390000
+0#
+#1400000
+b1 *
+b1 <
+10
+b111 >
+b1 =
+1-
+02
+b1000 6
+1#
+#1410000
+0#
+#1420000
+1/
+0-
+b1001 6
+b101 +
+b101 7"
+1#
+#1430000
+0#
+#1440000
+11
+0/
+b1010 6
+b1101 !
+b1101 8
+1#
+#1450000
+0#
+#1460000
+01
+b1011 6
+1#
+#1470000
+0#
+#1480000
+1#
+#1490000
+0#
+#1500000
+1#
+#1510000
+0#
+#1520000
+1#
+#1530000
+0#
+#1540000
+1#
+#1550000
+0#
+#1560000
+1#
+#1570000
+0#
+#1580000
+1#
+#1590000
+0#
+#1600000
+1#
+#1610000
+0#
+#1620000
+1#
+#1630000
+0#
+#1640000
+1#
+#1650000
+b10 p
+b101 R
+bz010 q
+0)"
+bz101 S
+0c
+0("
+0b
+0$"
+0^
+b1001 k
+b1100 M
+0#
+b110 $
+b110 (
+b110 D
+b110 j
+b11 "
+b11 '
+b11 C
+b11 L
+#1660000
+b110 E
+b110 u
+b11 F
+b11 W
+1#
+#1670000
+0#
+#1680000
+b110 )
+b110 K
+b11 .
+b11 J
+1#
+#1690000
+0#
+#1700000
+1#
+#1710000
+0#
+#1720000
+1#
+#1730000
+0#
+#1740000
+1#
+#1750000
+0#
+1&
+#1760000
+b0 6
+1#
+#1770000
+0#
+#1780000
+1#
+#1790000
+0#
+#1800000
+1#
+#1810000
+0#
+#1820000
+1#
+#1830000
+0#
+#1840000
+1#
+#1850000
+0#
+0&
+#1860000
+b1 6
+1#
+#1870000
+0#
+#1880000
+b10 6
+19
+b110 7
+b110 ;
+b11 3
+b11 :
+1#
+#1890000
+0#
+#1900000
+b1 1"
+bz001 2"
+0I"
+0H"
+0D"
+b0 +"
+b1111 *"
+09
+b11 6
+00
+b100 >
+b1111 ,
+b1111 ?
+1#
+#1910000
+0#
+#1920000
+b11 *
+b11 <
+b11 >
+b11 =
+b100 6
+1#
+#1930000
+0#
+#1940000
+b101 6
+b10 >
+b111 ,
+b111 ?
+1#
+#1950000
+0#
+#1960000
+b101 1"
+bz101 2"
+1I"
+1H"
+1D"
+b100 +"
+b1011 *"
+b1 >
+b11 ,
+b11 ?
+b110 6
+1#
+#1970000
+0#
+#1980000
+b111 1"
+bz111 2"
+1C"
+1B"
+1>"
+b110 +"
+b1001 *"
+12
+b111 6
+b0 >
+b1 ,
+b1 ?
+1#
+#1990000
+0#
+#2000000
+13"
+1F"
+0I"
+14"
+1@"
+0C"
+15"
+b0 1"
+1:"
+bz000 2"
+0="
+1<"
+18"
+b111 +"
+b1000 *"
+10
+b111 >
+b0 ,
+b0 ?
+1-
+02
+b1000 6
+1#
+#2010000
+0#
+#2020000
+1/
+0-
+b1001 6
+b0 +
+b0 7"
+1#
+#2030000
+0#
+#2040000
+11
+0/
+b1010 6
+b0 !
+b0 8
+1#
+#2050000
+0#
+#2060000
+01
+b1011 6
+1#
+#2070000
+0#
+#2080000
+1#
+#2090000
+0#
+#2100000
+1#
+#2110000
+0#
+#2120000
+1#
+#2130000
+0#
+#2140000
+1#
+#2150000
+0#
+#2160000
+1#
+#2170000
+0#
+#2180000
+1#
+#2190000
+0#
+#2200000
+1#
+#2210000
+0#
+#2220000
+1#
+#2230000
+0#
+#2240000
+1#
+#2250000
+0#
+#2260000
+1#
+#2270000
+0#
+#2280000
+1#
+#2290000
+0#
+#2300000
+1#
+#2310000
+0#
+#2320000
+1#
+#2330000
+0#
+#2340000
+1#
+#2350000
+0#
