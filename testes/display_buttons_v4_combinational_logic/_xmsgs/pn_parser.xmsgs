@@ -8,256 +8,56 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xaddr_decoder.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xaddr_decoder.v&quot; line 1
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">6</arg>. <arg fmt="%s" index="3">Macro &lt;ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xcprint.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Macro &lt;MEM_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xcprint.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xcprint.v&quot; line 2
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xctrl.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">64</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xctrl.v&quot; line 2
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">64</arg>. <arg fmt="%s" index="3">Macro &lt;REGF_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xdispDecoder.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">74</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xled.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">74</arg>. <arg fmt="%s" index="3">Macro &lt;LED0_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xled.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xled.v&quot; line 2
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xram.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. <arg fmt="%s" index="3">Macro &lt;SW_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xram.v&quot; line 2
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">78</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xregf.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">78</arg>. <arg fmt="%s" index="3">Macro &lt;SW2_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xregf.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xregf.v&quot; line 2
+</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">80</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xtop.v&quot; into library work</arg>
 </msg>
 
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">80</arg>. <arg fmt="%s" index="3">Macro &lt;BTN3_ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">82</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">82</arg>. <arg fmt="%s" index="3">Macro &lt;BTN2_ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">90</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xcprint.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xcprint.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">12</arg>. <arg fmt="%s" index="3">Macro &lt;ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">13</arg>. <arg fmt="%s" index="3">Macro &lt;INSTR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">19</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">24</arg>. <arg fmt="%s" index="3">Macro &lt;OPCODESZ&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Macro &lt;ldi&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">48</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Macro &lt;rdw&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">49</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">Macro &lt;wrw&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">51</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Macro &lt;addi&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">53</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">54</arg>. <arg fmt="%s" index="3">Macro &lt;add&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Macro &lt;and&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">55</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">56</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Macro &lt;beqi&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">62</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">71</arg>. <arg fmt="%s" index="3">Syntax error near &quot;]&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">74</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">75</arg>. <arg fmt="%s" index="3">Syntax error near &quot;/&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. <arg fmt="%s" index="3">Macro &lt;IMM_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">76</arg>. <arg fmt="%s" index="3">Syntax error near &quot;}&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. <arg fmt="%s" index="3">Macro &lt;REGF_BASE&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">84</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">94</arg>. <arg fmt="%s" index="3">Syntax error near &quot;||&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">96</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">105</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">107</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">123</arg>. <arg fmt="%s" index="3">Syntax error near &quot;&amp;&amp;&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">126</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">129</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">132</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">161</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">181</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">182</arg>. <arg fmt="%s" index="3">Syntax error near &quot;}&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">184</arg>. <arg fmt="%s" index="3">Syntax error near &quot;}&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">187</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">194</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">214</arg>. <arg fmt="%s" index="3">Syntax error near &quot;)&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">226</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="806" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">232</arg>. <arg fmt="%s" index="3">Syntax error near &quot;else&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xdispDecoder.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xled.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xled.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xram.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">8</arg>. <arg fmt="%s" index="3">Macro &lt;ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">9</arg>. <arg fmt="%s" index="3">Macro &lt;INSTR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">15</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v</arg>&quot; Line <arg fmt="%d" index="2">8</arg>. <arg fmt="%s" index="3">Macro &lt;REGF_ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xregf.v</arg>&quot; Line <arg fmt="%d" index="2">9</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v&quot; into library work</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="281" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Cannot open include file &quot;xdefs.vh&quot;.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">34</arg>. <arg fmt="%s" index="3">Macro &lt;INSTR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">35</arg>. <arg fmt="%s" index="3">Macro &lt;ADDR_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">41</arg>. <arg fmt="%s" index="3">Macro &lt;DATA_W&gt; is not defined.</arg>
-</msg>
-
-<msg type="error" file="ProjectMgmt" num="870" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">111</arg>. <arg fmt="%s" index="3">Macro &lt;REGF_ADDR_W&gt; is not defined.</arg>
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/src/xtop.v&quot; line 2
+</arg>
 </msg>
 
 </messages>
