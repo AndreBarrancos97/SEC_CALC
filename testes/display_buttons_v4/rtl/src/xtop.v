@@ -164,7 +164,7 @@ module xtop (
    // USER MODULES INSERTED BELOW
    //
    //
- 	/*xdispDecoder displayDecoder(
+ 	xdispDecoder displayDecoder(
 			.clk(clk),
 			.rst(rst),
 			//.sw_sel(sw_sel),
@@ -178,7 +178,7 @@ module xtop (
 			.dot(2'b00), //01 - 2nd display, 10 - 3rd display, 00 - none | (DOT POINT)
 			.disp_select(Disp_sel[3:0]), //wich display will be selected
 			.disp_value(Disp[7:0]) //value to be displayed
-	);*/
+	);
 	/*xALU real_alu(
 		.clk(clk),
 		.rst(rst),
@@ -186,7 +186,7 @@ module xtop (
 		.result_uncoded()
 	);*/
 
-	complement_to_2 complement1 (
+	/*complement_to_2 complement1 (
 		.rst(rst),
 		.clk(clk),
 		.nr_coded(data_to_wr[11:0]),
@@ -195,7 +195,7 @@ module xtop (
 		.second_nr(second_nr),
 		.operation(operation),
 		.complement1_finish(complement1_finish)
-	);
+	);*/
   
 `ifdef DEBUG
    xcprint cprint (

@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: xtop.prj
@@ -230,21 +230,21 @@ Synthesizing Unit <xdispDecoder>.
     Related source file is "rtl/src/xdispDecoder.v".
     Using one-hot encoding for signal <disp_dot>.
     Found 1-of-4 decoder for signal <disp_select>.
-    Found 4-bit adder for signal <$add0000> created at line 53.
-    Found 4-bit adder for signal <$add0001> created at line 53.
-    Found 4-bit adder for signal <$add0002> created at line 53.
-    Found 4-bit adder for signal <$add0003> created at line 53.
-    Found 4-bit adder for signal <$add0004> created at line 55.
-    Found 4-bit adder for signal <$add0005> created at line 53.
-    Found 4-bit adder for signal <$add0006> created at line 55.
+    Found 4-bit adder for signal <$add0000> created at line 58.
+    Found 4-bit adder for signal <$add0001> created at line 58.
+    Found 4-bit adder for signal <$add0002> created at line 58.
+    Found 4-bit adder for signal <$add0003> created at line 58.
+    Found 4-bit adder for signal <$add0004> created at line 60.
+    Found 4-bit adder for signal <$add0005> created at line 58.
+    Found 4-bit adder for signal <$add0006> created at line 60.
     Found 5-bit 4-to-1 multiplexer for signal <aux>.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 52.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 52.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 52.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 54.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 52.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 54.
-    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 52.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 59.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 59.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 57.
     Found 8-bit register for signal <bin_reg>.
     Found 20-bit up counter for signal <refresh_counter>.
     Summary:
@@ -259,6 +259,10 @@ Unit <xdispDecoder> synthesized.
 
 Synthesizing Unit <xtop>.
     Related source file is "rtl/src/xtop.v".
+WARNING:Xst:1780 - Signal <second_nr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <operation> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <first_nr> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <complement1_finish> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
 Unit <xtop> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -390,7 +394,7 @@ Optimizing unit <xdispDecoder> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 45.
+Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 46.
 
 Final Macro Processing ...
 
@@ -428,17 +432,17 @@ Design Statistics
 # IOs                              : 25
 
 Cell Usage :
-# BELS                             : 1151
+# BELS                             : 1172
 #      GND                         : 1
 #      INV                         : 33
 #      LUT1                        : 28
 #      LUT2                        : 56
-#      LUT3                        : 147
-#      LUT3_D                      : 12
-#      LUT3_L                      : 16
-#      LUT4                        : 413
-#      LUT4_D                      : 74
-#      LUT4_L                      : 84
+#      LUT3                        : 162
+#      LUT3_D                      : 14
+#      LUT3_L                      : 21
+#      LUT4                        : 415
+#      LUT4_D                      : 72
+#      LUT4_L                      : 83
 #      MUXCY                       : 128
 #      MUXF5                       : 33
 #      VCC                         : 1
@@ -461,10 +465,10 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-4 
 
- Number of Slices:                      467  out of    960    48%  
+ Number of Slices:                      479  out of    960    49%  
  Number of Slice Flip Flops:            104  out of   1920     5%  
- Number of 4 input LUTs:                895  out of   1920    46%  
-    Number used as logic:               863
+ Number of 4 input LUTs:                916  out of   1920    47%  
+    Number used as logic:               884
     Number used as RAMs:                 32
  Number of IOs:                          25
  Number of bonded IOBs:                  25  out of     83    30%  
@@ -507,9 +511,9 @@ Timing Summary:
 ---------------
 Speed Grade: -4
 
-   Minimum period: 21.824ns (Maximum Frequency: 45.822MHz)
+   Minimum period: 21.823ns (Maximum Frequency: 45.822MHz)
    Minimum input arrival time before clock: 14.932ns
-   Maximum output required time after clock: 16.616ns
+   Maximum output required time after clock: 16.712ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -518,10 +522,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 21.824ns (frequency: 45.822MHz)
-  Total number of paths / destination ports: 8427420 / 423
+  Clock period: 21.823ns (frequency: 45.822MHz)
+  Total number of paths / destination ports: 8430960 / 423
 -------------------------------------------------------------------------
-Delay:               21.824ns (Levels of Logic = 44)
+Delay:               21.823ns (Levels of Logic = 44)
   Source:            ram/Mram_mem (RAM)
   Destination:       controller/regC_2 (FF)
   Source Clock:      clk rising
@@ -536,7 +540,7 @@ Delay:               21.824ns (Levels of Logic = 44)
      LUT3_D:I2->O          5   0.704   0.637  controller/mem_addr<3>1_SW0 (N175)
      LUT4:I3->O            1   0.704   0.000  controller/mem_sel17_F (N619)
      MUXF5:I0->O          16   0.321   1.038  controller/mem_sel17 (controller/mem_sel17)
-     LUT4_D:I3->O         65   0.704   1.352  controller/operand<0>21 (controller/N13)
+     LUT4_D:I3->O         64   0.704   1.351  controller/operand<0>21 (controller/N13)
      LUT3:I1->O            1   0.704   0.000  controller/operand<0>92_SW0_F (N463)
      MUXF5:I0->O           1   0.321   0.455  controller/operand<0>92_SW0 (N166)
      LUT4:I2->O            4   0.704   0.622  controller/operand<0>125 (controller/operand<0>)
@@ -578,7 +582,7 @@ Delay:               21.824ns (Levels of Logic = 44)
      LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
      FDCE:D                    0.308          controller/regC_2
     ----------------------------------------
-    Total                     21.824ns (14.333ns logic, 7.491ns route)
+    Total                     21.823ns (14.333ns logic, 7.490ns route)
                                        (65.7% logic, 34.3% route)
 
 =========================================================================
@@ -645,44 +649,44 @@ Offset:              14.932ns (Levels of Logic = 42)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 7543 / 12
 -------------------------------------------------------------------------
-Offset:              16.616ns (Levels of Logic = 12)
+Offset:              16.712ns (Levels of Logic = 12)
   Source:            displayDecoder/bin_reg_3 (FF)
-  Destination:       Disp<4> (PAD)
+  Destination:       Disp<1> (PAD)
   Source Clock:      clk rising
 
-  Data Path: displayDecoder/bin_reg_3 to Disp<4>
+  Data Path: displayDecoder/bin_reg_3 to Disp<1>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDCE:C->Q            14   0.591   1.175  displayDecoder/bin_reg_3 (displayDecoder/bin_reg_3)
      LUT4:I0->O            1   0.704   0.000  displayDecoder/Mmux_aux41_F (N589)
      MUXF5:I0->O          11   0.321   1.108  displayDecoder/Mmux_aux41 (displayDecoder/N0)
-     LUT2:I0->O            2   0.704   0.451  displayDecoder/bcd_mux001611 (displayDecoder/N26)
+     LUT2:I0->O            2   0.704   0.451  displayDecoder/bcd_mux001611 (displayDecoder/N27)
      LUT4:I3->O            1   0.704   0.499  displayDecoder/Mmux_aux758_SW0 (N505)
      LUT4:I1->O            1   0.704   0.000  displayDecoder/Mmux_aux7178_SW0_F (N611)
      MUXF5:I0->O           1   0.321   0.455  displayDecoder/Mmux_aux7178_SW0 (N493)
      LUT4:I2->O            1   0.704   0.000  displayDecoder/Mmux_aux7178_G (N614)
      MUXF5:I1->O           7   0.321   0.743  displayDecoder/Mmux_aux7178 (displayDecoder/Mmux_aux3)
      LUT3:I2->O            5   0.704   0.808  displayDecoder/disp_value_1_or000011 (displayDecoder/N1)
-     LUT4:I0->O            1   0.704   0.499  displayDecoder/disp_value_4_or0000_SW0 (N50)
-     LUT4:I1->O            1   0.704   0.420  displayDecoder/disp_value_4_or0000 (Disp_4_OBUF)
-     OBUF:I->O                 3.272          Disp_4_OBUF (Disp<4>)
+     LUT4:I0->O            1   0.704   0.595  displayDecoder/disp_value_1_or0000_SW2 (N489)
+     LUT4:I0->O            1   0.704   0.420  displayDecoder/disp_value_1_or0000 (Disp_1_OBUF)
+     OBUF:I->O                 3.272          Disp_1_OBUF (Disp<1>)
     ----------------------------------------
-    Total                     16.616ns (10.458ns logic, 6.158ns route)
-                                       (62.9% logic, 37.1% route)
+    Total                     16.712ns (10.458ns logic, 6.254ns route)
+                                       (62.6% logic, 37.4% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 14.00 secs
-Total CPU time to Xst completion: 13.97 secs
+Total REAL time to Xst completion: 15.00 secs
+Total CPU time to Xst completion: 14.72 secs
  
 --> 
 
 
-Total memory usage is 543144 kilobytes
+Total memory usage is 544716 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
 Number of infos    :    4 (   0 filtered)
 

@@ -1,0 +1,199 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Jan 13 17:46:41 2020
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "B8" LEVEL 1;
+COMP "rst" LOCATE = SITE "G12" LEVEL 1;
+COMP "Disp<0>" LOCATE = SITE "L14" LEVEL 1;
+COMP "Disp<1>" LOCATE = SITE "H12" LEVEL 1;
+COMP "Disp<2>" LOCATE = SITE "N14" LEVEL 1;
+COMP "Disp<3>" LOCATE = SITE "N11" LEVEL 1;
+COMP "Disp<4>" LOCATE = SITE "P12" LEVEL 1;
+COMP "Disp<5>" LOCATE = SITE "L13" LEVEL 1;
+COMP "Disp<6>" LOCATE = SITE "M12" LEVEL 1;
+COMP "Disp<7>" LOCATE = SITE "N13" LEVEL 1;
+COMP "Btn2" LOCATE = SITE "M4" LEVEL 1;
+COMP "Btn3" LOCATE = SITE "A7" LEVEL 1;
+COMP "Sw<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "Sw<1>" LOCATE = SITE "L3" LEVEL 1;
+COMP "Sw<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "Sw<3>" LOCATE = SITE "B4" LEVEL 1;
+COMP "Sw<4>" LOCATE = SITE "G3" LEVEL 1;
+COMP "Sw<5>" LOCATE = SITE "F3" LEVEL 1;
+COMP "Sw<6>" LOCATE = SITE "E2" LEVEL 1;
+COMP "Sw<7>" LOCATE = SITE "N3" LEVEL 1;
+COMP "Disp_sel<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "Disp_sel<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "Disp_sel<2>" LOCATE = SITE "M13" LEVEL 1;
+COMP "Disp_sel<3>" LOCATE = SITE "K14" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+PIN ram/Mram_mem.A_pins<10> = BEL "ram/Mram_mem.A" PINNAME CLKA;
+PIN ram/Mram_mem.B_pins<10> = BEL "ram/Mram_mem.B" PINNAME CLKB;
+TIMEGRP clk = BEL "controller/regB_31" BEL "controller/regB_30" BEL
+        "controller/regB_29" BEL "controller/regB_28" BEL "controller/regB_27"
+        BEL "controller/regB_26" BEL "controller/regB_25" BEL
+        "controller/regB_24" BEL "controller/regB_23" BEL "controller/regB_22"
+        BEL "controller/regB_21" BEL "controller/regB_20" BEL
+        "controller/regB_19" BEL "controller/regB_18" BEL "controller/regB_17"
+        BEL "controller/regB_16" BEL "controller/regB_15" BEL
+        "controller/regB_14" BEL "controller/regB_13" BEL "controller/regB_12"
+        BEL "controller/regB_11" BEL "controller/regB_10" BEL
+        "controller/regB_9" BEL "controller/regB_8" BEL "controller/regB_7"
+        BEL "controller/regB_6" BEL "controller/regB_5" BEL
+        "controller/regB_4" BEL "controller/regB_3" BEL "controller/regB_2"
+        BEL "controller/regB_1" BEL "controller/regB_0" BEL
+        "controller/regA_31" BEL "controller/regA_30" BEL "controller/regA_29"
+        BEL "controller/regA_28" BEL "controller/regA_27" BEL
+        "controller/regA_26" BEL "controller/regA_25" BEL "controller/regA_24"
+        BEL "controller/regA_23" BEL "controller/regA_22" BEL
+        "controller/regA_21" BEL "controller/regA_20" BEL "controller/regA_19"
+        BEL "controller/regA_18" BEL "controller/regA_17" BEL
+        "controller/regA_16" BEL "controller/regA_15" BEL "controller/regA_14"
+        BEL "controller/regA_13" BEL "controller/regA_12" BEL
+        "controller/regA_11" BEL "controller/regA_10" BEL "controller/regA_9"
+        BEL "controller/regA_8" BEL "controller/regA_7" BEL
+        "controller/regA_6" BEL "controller/regA_5" BEL "controller/regA_4"
+        BEL "controller/regA_3" BEL "controller/regA_2" BEL
+        "controller/regA_1" BEL "controller/regA_0" BEL "controller/regC_2"
+        BEL "controller/regC_1" BEL "controller/regC_0" BEL "controller/pc_8"
+        BEL "controller/pc_7" BEL "controller/pc_6" BEL "controller/pc_5" BEL
+        "controller/pc_4" BEL "controller/pc_3" BEL "controller/pc_2" BEL
+        "controller/pc_1" BEL "controller/pc_0" BEL "regf/Mram_regf32" BEL
+        "regf/Mram_regf31" BEL "regf/Mram_regf30" BEL "regf/Mram_regf29" BEL
+        "regf/Mram_regf28" BEL "regf/Mram_regf27" BEL "regf/Mram_regf26" BEL
+        "regf/Mram_regf25" BEL "regf/Mram_regf24" BEL "regf/Mram_regf23" BEL
+        "regf/Mram_regf22" BEL "regf/Mram_regf21" BEL "regf/Mram_regf20" BEL
+        "regf/Mram_regf19" BEL "regf/Mram_regf18" BEL "regf/Mram_regf17" BEL
+        "regf/Mram_regf16" BEL "regf/Mram_regf15" BEL "regf/Mram_regf14" BEL
+        "regf/Mram_regf13" BEL "regf/Mram_regf12" BEL "regf/Mram_regf11" BEL
+        "regf/Mram_regf10" BEL "regf/Mram_regf9" BEL "regf/Mram_regf8" BEL
+        "regf/Mram_regf7" BEL "regf/Mram_regf6" BEL "regf/Mram_regf5" BEL
+        "regf/Mram_regf4" BEL "regf/Mram_regf3" BEL "regf/Mram_regf2" BEL
+        "regf/Mram_regf1" BEL "displayDecoder/refresh_counter_19" BEL
+        "displayDecoder/refresh_counter_18" BEL
+        "displayDecoder/refresh_counter_17" BEL
+        "displayDecoder/refresh_counter_16" BEL
+        "displayDecoder/refresh_counter_15" BEL
+        "displayDecoder/refresh_counter_14" BEL
+        "displayDecoder/refresh_counter_13" BEL
+        "displayDecoder/refresh_counter_12" BEL
+        "displayDecoder/refresh_counter_11" BEL
+        "displayDecoder/refresh_counter_10" BEL
+        "displayDecoder/refresh_counter_9" BEL
+        "displayDecoder/refresh_counter_8" BEL
+        "displayDecoder/refresh_counter_7" BEL
+        "displayDecoder/refresh_counter_6" BEL
+        "displayDecoder/refresh_counter_5" BEL
+        "displayDecoder/refresh_counter_4" BEL
+        "displayDecoder/refresh_counter_3" BEL
+        "displayDecoder/refresh_counter_2" BEL
+        "displayDecoder/refresh_counter_1" BEL
+        "displayDecoder/refresh_counter_0" BEL "displayDecoder/bin_reg_7" BEL
+        "displayDecoder/bin_reg_6" BEL "displayDecoder/bin_reg_5" BEL
+        "displayDecoder/bin_reg_4" BEL "displayDecoder/bin_reg_3" BEL
+        "displayDecoder/bin_reg_2" BEL "displayDecoder/bin_reg_1" BEL
+        "displayDecoder/bin_reg_0" BEL
+        "complement1/complement_first_nr/counter_0" BEL
+        "complement1/complement_first_nr/counter_1" BEL
+        "complement1/complement_first_nr/counter_2" BEL
+        "complement1/complement_first_nr/counter_3" BEL
+        "complement1/complement_first_nr/sum_0" BEL
+        "complement1/complement_first_nr/sum_1" BEL
+        "complement1/complement_first_nr/sum_2" BEL
+        "complement1/complement_first_nr/sum_3" BEL
+        "complement1/complement_second_nr/counter_0" BEL
+        "complement1/complement_second_nr/counter_1" BEL
+        "complement1/complement_second_nr/counter_2" BEL
+        "complement1/complement_second_nr/counter_3" BEL
+        "complement1/complement_second_nr/sum_0" BEL
+        "complement1/complement_second_nr/sum_1" BEL
+        "complement1/complement_second_nr/sum_2" BEL
+        "complement1/complement_second_nr/sum_3" BEL "complement1/second_nr_3"
+        BEL "complement1/second_nr_2" BEL "complement1/second_nr_1" BEL
+        "complement1/second_nr_0" BEL "complement1/first_nr_3" BEL
+        "complement1/first_nr_2" BEL "complement1/first_nr_1" BEL
+        "complement1/first_nr_0" BEL "complement1/operation_3" BEL
+        "complement1/operation_2" BEL "complement1/operation_1" BEL
+        "complement1/operation_0" BEL "complement1/complement1_finish" BEL
+        "complement1/oper_nr_reg_3" BEL "complement1/oper_nr_reg_2" BEL
+        "complement1/oper_nr_reg_1" BEL "complement1/oper_nr_reg_0" BEL
+        "complement1/second_nr_reg_3" BEL "complement1/second_nr_reg_2" BEL
+        "complement1/second_nr_reg_1" BEL "complement1/second_nr_reg_0" BEL
+        "complement1/first_nr_reg_3" BEL "complement1/first_nr_reg_2" BEL
+        "complement1/first_nr_reg_1" BEL "complement1/first_nr_reg_0" BEL
+        "real_alu/divide/start_aux" BEL "real_alu/divide/D_aux_0" BEL
+        "real_alu/divide/D_aux_1" BEL "real_alu/divide/D_aux_2" BEL
+        "real_alu/divide/D_aux_3" BEL "real_alu/divide/divider_aux_0" BEL
+        "real_alu/divide/divider_aux_1" BEL "real_alu/divide/divider_aux_2"
+        BEL "real_alu/divide/divider_aux_3" BEL "real_alu/divide/q_0" BEL
+        "real_alu/divide/q_1" BEL "real_alu/divide/q_2" BEL
+        "real_alu/divide/q_3" BEL "real_alu/divide/q_4" BEL
+        "real_alu/divide/counter_0" BEL "real_alu/divide/counter_1" BEL
+        "real_alu/divide/counter_2" BEL "real_alu/divide/counter_3" BEL
+        "real_alu/divide/div1/cnt_1" BEL "real_alu/divide/div1/cnt_0" BEL
+        "real_alu/divide/div1/cnt_2" BEL "real_alu/divide/div1/Dext_7" BEL
+        "real_alu/divide/div1/Dext_6" BEL "real_alu/divide/div1/Dext_5" BEL
+        "real_alu/divide/div1/Dext_4" BEL "real_alu/divide/div1/Dext_3" BEL
+        "real_alu/divide/div1/Dext_2" BEL "real_alu/divide/div1/Dext_1" BEL
+        "real_alu/divide/div1/Dext_0" BEL "real_alu/divide/div1/q_0" BEL
+        "real_alu/divide/div1/q_2" BEL "real_alu/divide/div1/q_3" BEL
+        "real_alu/divide/div1/q_1" BEL "real_alu/divide/result_div/sum_2" BEL
+        "real_alu/divide/result_div/sum_1" BEL
+        "real_alu/divide/result_div/sum_0" BEL
+        "real_alu/divide/multiply_comple2/division_complement_first_nr/complement1_finish"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_first_nr/sum_0"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_first_nr/sum_1"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_first_nr/sum_2"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_second_nr/sum_0"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_second_nr/sum_1"
+        BEL
+        "real_alu/divide/multiply_comple2/division_complement_second_nr/sum_2"
+        BEL "real_alu/divide/multiply_comple2/second_nr_2" BEL
+        "real_alu/divide/multiply_comple2/second_nr_1" BEL
+        "real_alu/divide/multiply_comple2/second_nr_0" BEL
+        "real_alu/divide/multiply_comple2/first_nr_2" BEL
+        "real_alu/divide/multiply_comple2/first_nr_1" BEL
+        "real_alu/divide/multiply_comple2/first_nr_0" BEL "real_alu/mult/c_0"
+        BEL "real_alu/mult/c_1" BEL "real_alu/mult/c_2" BEL
+        "real_alu/mult/c_3" BEL "real_alu/mult/c_4" BEL "real_alu/mult/c_5"
+        BEL "real_alu/mult/c_6" BEL "real_alu/mult/c_7" BEL
+        "real_alu/mult/counter_0" BEL "real_alu/mult/counter_1" BEL
+        "real_alu/mult/counter_2" BEL "real_alu/mult/counter_3" BEL
+        "real_alu/mult/aux_sumy_v2_0" BEL "real_alu/mult/aux_sumy_v2_1" BEL
+        "real_alu/mult/aux_sumy_v2_2" BEL "real_alu/mult/aux_sumy_v2_3" BEL
+        "real_alu/mult/aux_sumy_v2_4" BEL "real_alu/mult/aux_sumy_v2_5" BEL
+        "real_alu/mult/aux_sumy_v2_6" BEL
+        "real_alu/mult/multiply_complement_result/sum_7" BEL
+        "real_alu/mult/multiply_complement_result/sum_6" BEL
+        "real_alu/mult/multiply_complement_result/sum_5" BEL
+        "real_alu/mult/multiply_complement_result/sum_4" BEL
+        "real_alu/mult/multiply_complement_result/sum_3" BEL
+        "real_alu/mult/multiply_complement_result/sum_2" BEL
+        "real_alu/mult/multiply_complement_result/sum_1" BEL
+        "real_alu/mult/multiply_complement_result/sum_0" BEL
+        "real_alu/adder4bits/counter_0" BEL "real_alu/adder4bits/counter_1"
+        BEL "real_alu/adder4bits/counter_2" BEL "real_alu/adder4bits/sum_0"
+        BEL "real_alu/adder4bits/sum_1" BEL "real_alu/adder4bits/sum_2" BEL
+        "real_alu/adder4bits/sum_3" BEL "real_alu/adder4bits/sum_4" BEL
+        "real_alu/alu_done" BEL "real_alu/result_uncoded_7" BEL
+        "real_alu/result_uncoded_6" BEL "real_alu/result_uncoded_5" BEL
+        "real_alu/result_uncoded_4" BEL "real_alu/result_uncoded_3" BEL
+        "real_alu/result_uncoded_2" BEL "real_alu/result_uncoded_1" BEL
+        "real_alu/result_uncoded_0" BEL "real_alu/operation_reg_3" BEL
+        "real_alu/operation_reg_2" BEL "real_alu/operation_reg_1" BEL
+        "real_alu/operation_reg_0" BEL "real_alu/second_nr_reg_3" BEL
+        "real_alu/second_nr_reg_2" BEL "real_alu/second_nr_reg_1" BEL
+        "real_alu/second_nr_reg_0" BEL "real_alu/first_nr_reg_3" BEL
+        "real_alu/first_nr_reg_2" BEL "real_alu/first_nr_reg_1" BEL
+        "real_alu/first_nr_reg_0" PIN "ram/Mram_mem.A_pins<10>" PIN
+        "ram/Mram_mem.B_pins<10>" BEL "clk_BUFGP/BUFG.GCLKMUX" BEL
+        "clk_BUFGP/BUFG";
+TS_clkin = PERIOD TIMEGRP "clk" 20 ns HIGH 50%;
+SCHEMATIC END;
+

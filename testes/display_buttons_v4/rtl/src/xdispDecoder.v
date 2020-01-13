@@ -3,8 +3,6 @@
 module xdispDecoder(
     input clk,
     input rst,
-	//input sw_sel,
-	//input btn3_sel,
 	input [1:0] msg,
 	input led0_sel,
 	input wr_enable,
@@ -25,19 +23,26 @@ wire [1:0] LED_activating_counter;
 //reg aux_ii;
 reg [11 : 0] bcd; 
 reg [3:0] j;  
+
 always @(posedge rst or posedge clk)
-	if(rst)
+	if(rst)begin
 		bin_reg <= 7'b0;
-	else if (wr_enable & led0_sel)
+		refresh_counter <= 0;
+	end
+	else if (wr_enable & led0_sel)begin
+		refresh_counter <= 0;
 		bin_reg <= bin[7:0];
+		end
+	else
+      refresh_counter <= refresh_counter + 1;
 
 	
-always @(posedge clk or posedge rst)    
+/*always @(posedge clk or posedge rst)    
     if(rst==1)
         refresh_counter <= 0;
    else
       refresh_counter <= refresh_counter + 1;
-  
+*/  
 assign LED_activating_counter = refresh_counter[19:18];
 
 

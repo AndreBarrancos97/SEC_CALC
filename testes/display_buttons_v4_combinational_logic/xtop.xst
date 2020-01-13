@@ -23,7 +23,7 @@ run
 -slice_utilization_ratio 100
 -bram_utilization_ratio 100
 -verilog2001 YES
--vlgincdir { "/home/andre/Documents/SEC_CALC/testes/display_buttons_v4/rtl/include" }
+-vlgincdir { "/home/andre/Documents/SEC_CALC/testes/display_buttons_v4_combinational_logic/rtl/include" }
 -fsm_extract YES -fsm_encoding Auto
 -safe_implementation No
 -fsm_style LUT

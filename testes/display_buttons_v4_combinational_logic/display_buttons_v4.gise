@@ -58,6 +58,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="xtop.ut" xil_pn:subbranch="FPGAConfiguration"/>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="xtop.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="xtop.xst"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="xtop_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="xtop_envsettings.html"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="xtop_fpga_editor.log"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="xtop_guide.ncd" xil_pn:origination="imported"/>
@@ -70,7 +71,7 @@
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="xtop_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="xtop_pad.txt" xil_pn:subbranch="Par"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="xtop_par.xrpt"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="xtop_stx_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="xtop_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="xtop_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="xtop_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="xtop_usage.xml"/>
@@ -121,6 +122,7 @@
     <transform xil_pn:end_ts="1577457060" xil_pn:in_ck="6276546229159052199" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="3938861145187832997" xil_pn:start_ts="1577457058">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
     </transform>
     <transform xil_pn:end_ts="1576523532" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1576523532">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -150,13 +152,9 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1577361927" xil_pn:in_ck="8225951873712747617" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4438749391157435483" xil_pn:start_ts="1577361910">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1578920291" xil_pn:in_ck="8225951873712747617" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-4438749391157435483" xil_pn:start_ts="1578920283">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
@@ -164,9 +162,10 @@
       <outfile xil_pn:name="xtop.ngc"/>
       <outfile xil_pn:name="xtop.ngr"/>
       <outfile xil_pn:name="xtop.prj"/>
-      <outfile xil_pn:name="xtop.stx"/>
       <outfile xil_pn:name="xtop.syr"/>
       <outfile xil_pn:name="xtop.xst"/>
+      <outfile xil_pn:name="xtop_beh.prj"/>
+      <outfile xil_pn:name="xtop_stx_beh.prj"/>
       <outfile xil_pn:name="xtop_xst.xrpt"/>
     </transform>
     <transform xil_pn:end_ts="1576523549" xil_pn:in_ck="5268502077303" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="123229027436343853" xil_pn:start_ts="1576523549">

@@ -65,7 +65,7 @@ module xtop_tb;
       // Initialize Inputs
       clk = 1;
       rst = 0;  
-      Sw = 8'b11110011; // a e b
+      Sw = 8'b00110011; // a e b
       Btn3 = 1'b1;
       Btn2 = 1'b0;
       // assert reset for 1 clock cycle
