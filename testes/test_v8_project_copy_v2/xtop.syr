@@ -1,0 +1,1083 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: xtop.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "xtop.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "xtop"
+Output Format                      : NGC
+Target Device                      : xc3s100e-4-cp132
+
+---- Source Options
+Top Module Name                    : xtop
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "rtl/src/full_adder.v" in library work
+Compiling verilog file "rtl/src/multiply_4bits_XOR.v" in library work
+Module <full_adder> compiled
+Compiling verilog file "rtl/src/division_4bits_XOR.v" in library work
+Module <multiply_4bits_XOR> compiled
+Compiling verilog file "rtl/src/multiply_xcomplement_to_2.v" in library work
+Module <division_4bits_XOR> compiled
+Compiling verilog file "rtl/src/multiply_8bits_XOR.v" in library work
+Module <multiply_complement_to_2> compiled
+Compiling verilog file "rtl/src/div_par.v" in library work
+Module <multiply_8bits_XOR> compiled
+Compiling verilog file "rtl/src/division_xcomplement_to_2.v" in library work
+Module <div_par> compiled
+Compiling verilog file "rtl/src/signed_shfit_mult.v" in library work
+Module <division_complement_to_2> compiled
+Compiling verilog file "rtl/src/signed_shfit_division.v" in library work
+Module <multiply_block> compiled
+Compiling verilog file "rtl/src/full_adder_4bits_XOR.v" in library work
+Module <division_block> compiled
+Compiling verilog file "rtl/src/full_adder_4bits.v" in library work
+Module <full_adder_4bits_XOR> compiled
+Compiling verilog file "rtl/src/xregf.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <full_adder_4bits> compiled
+Compiling verilog file "rtl/src/xram.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xregf> compiled
+Compiling verilog file "rtl/src/xdispDecoder.v" in library work
+Module <xram> compiled
+Compiling verilog file "rtl/src/xctrl.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xdispDecoder> compiled
+Compiling verilog file "rtl/src/xcomplement_to_2.v" in library work
+Module <xctrl> compiled
+Compiling verilog file "rtl/src/xALU.v" in library work
+Module <complement_to_2> compiled
+Compiling verilog file "rtl/src/xaddr_decoder.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <xALU> compiled
+Compiling verilog file "rtl/src/Convert_Neg_to_Pos_8bits.v" in library work
+Module <xaddr_decoder> compiled
+Compiling verilog file "rtl/src/xtop.v" in library work
+Compiling verilog include file "xdefs.vh"
+Module <convert_Neg_to_Pos> compiled
+Module <xtop> compiled
+No errors in compilation
+Analysis of file <"xtop.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <xtop> in library <work>.
+
+Analyzing hierarchy for module <xctrl> in library <work>.
+
+Analyzing hierarchy for module <xram> in library <work>.
+
+Analyzing hierarchy for module <xregf> in library <work>.
+
+Analyzing hierarchy for module <xaddr_decoder> in library <work>.
+
+Analyzing hierarchy for module <convert_Neg_to_Pos> in library <work>.
+
+Analyzing hierarchy for module <xdispDecoder> in library <work>.
+
+Analyzing hierarchy for module <xALU> in library <work>.
+
+Analyzing hierarchy for module <complement_to_2> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder_4bits> in library <work>.
+
+Analyzing hierarchy for module <multiply_block> in library <work>.
+
+Analyzing hierarchy for module <division_block> in library <work>.
+
+Analyzing hierarchy for module <full_adder_4bits_XOR> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <multiply_complement_to_2> in library <work>.
+
+Analyzing hierarchy for module <multiply_8bits_XOR> in library <work>.
+
+Analyzing hierarchy for module <division_complement_to_2> in library <work>.
+
+Analyzing hierarchy for module <div_par> in library <work>.
+
+Analyzing hierarchy for module <division_4bits_XOR> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <multiply_4bits_XOR> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+Analyzing hierarchy for module <full_adder> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <xtop>.
+Module <xtop> is correct for synthesis.
+ 
+Analyzing module <xctrl> in library <work>.
+Module <xctrl> is correct for synthesis.
+ 
+Analyzing module <xram> in library <work>.
+INFO:Xst:2546 - "rtl/src/xram.v" line 63: reading initialization file "program.hex".
+Module <xram> is correct for synthesis.
+ 
+Analyzing module <xregf> in library <work>.
+Module <xregf> is correct for synthesis.
+ 
+Analyzing module <xaddr_decoder> in library <work>.
+Module <xaddr_decoder> is correct for synthesis.
+ 
+Analyzing module <convert_Neg_to_Pos> in library <work>.
+Module <convert_Neg_to_Pos> is correct for synthesis.
+ 
+Analyzing module <full_adder> in library <work>.
+Module <full_adder> is correct for synthesis.
+ 
+Analyzing module <xdispDecoder> in library <work>.
+Module <xdispDecoder> is correct for synthesis.
+ 
+Analyzing module <xALU> in library <work>.
+Module <xALU> is correct for synthesis.
+ 
+Analyzing module <full_adder_4bits> in library <work>.
+Module <full_adder_4bits> is correct for synthesis.
+ 
+Analyzing module <multiply_block> in library <work>.
+Module <multiply_block> is correct for synthesis.
+ 
+Analyzing module <multiply_complement_to_2> in library <work>.
+Module <multiply_complement_to_2> is correct for synthesis.
+ 
+Analyzing module <multiply_4bits_XOR> in library <work>.
+Module <multiply_4bits_XOR> is correct for synthesis.
+ 
+Analyzing module <multiply_8bits_XOR> in library <work>.
+Module <multiply_8bits_XOR> is correct for synthesis.
+ 
+Analyzing module <division_block> in library <work>.
+Module <division_block> is correct for synthesis.
+ 
+Analyzing module <division_complement_to_2> in library <work>.
+Module <division_complement_to_2> is correct for synthesis.
+ 
+Analyzing module <div_par> in library <work>.
+Module <div_par> is correct for synthesis.
+ 
+Analyzing module <division_4bits_XOR> in library <work>.
+Module <division_4bits_XOR> is correct for synthesis.
+ 
+Analyzing module <complement_to_2> in library <work>.
+Module <complement_to_2> is correct for synthesis.
+ 
+Analyzing module <full_adder_4bits_XOR> in library <work>.
+Module <full_adder_4bits_XOR> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <xctrl>.
+    Related source file is "rtl/src/xctrl.v".
+    Found 9-bit register for signal <pc>.
+    Found 32-bit addsub for signal <adder_res>.
+    Found 32-bit adder for signal <adder_res$addsub0000>.
+    Found 1-bit xor2 for signal <alu_overflow$xor0000> created at line 212.
+    Found 1-bit xor2 for signal <alu_overflow$xor0001> created at line 218.
+    Found 32-bit 4-to-1 multiplexer for signal <alu_result>.
+    Found 1-bit adder for signal <carry_res_n$addsub0000> created at line 188.
+    Found 1-bit adder for signal <carry_res_n$addsub0001> created at line 190.
+    Found 1-bit xor2 for signal <carry_res_n$xor0000> created at line 188.
+    Found 1-bit xor2 for signal <carry_res_n$xor0001> created at line 190.
+    Found 32-bit addsub for signal <carry_res_n_1>.
+    Found 32-bit 4-to-1 multiplexer for signal <operand$mux0000>.
+    Found 9-bit adder for signal <pc$addsub0000> created at line 122.
+    Found 32-bit register for signal <regA>.
+    Found 32-bit subtractor for signal <regA$addsub0000> created at line 153.
+    Found 32-bit 4-to-1 multiplexer for signal <regA$mux0000>.
+    Found 32-bit register for signal <regB>.
+    Found 3-bit register for signal <regC>.
+    Found 32-bit xor2 for signal <xor_res>.
+    Summary:
+	inferred  76 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred  96 Multiplexer(s).
+Unit <xctrl> synthesized.
+
+
+Synthesizing Unit <xram>.
+    Related source file is "rtl/src/xram.v".
+    Found 512x32-bit dual-port RAM <Mram_mem> for signal <mem>.
+    Found 32-bit register for signal <instruction>.
+    Found 32-bit register for signal <data_out_int>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  64 D-type flip-flop(s).
+Unit <xram> synthesized.
+
+
+Synthesizing Unit <xregf>.
+    Related source file is "rtl/src/xregf.v".
+    Found 16x32-bit single-port RAM <Mram_regf> for signal <regf>.
+    Summary:
+	inferred   1 RAM(s).
+Unit <xregf> synthesized.
+
+
+Synthesizing Unit <xaddr_decoder>.
+    Related source file is "rtl/src/xaddr_decoder.v".
+Unit <xaddr_decoder> synthesized.
+
+
+Synthesizing Unit <xdispDecoder>.
+    Related source file is "rtl/src/xdispDecoder.v".
+    Using one-hot encoding for signal <disp_dot>.
+    Found 1-of-4 decoder for signal <disp_select>.
+    Found 4-bit adder for signal <$add0000> created at line 58.
+    Found 4-bit adder for signal <$add0001> created at line 58.
+    Found 4-bit adder for signal <$add0002> created at line 58.
+    Found 4-bit adder for signal <$add0003> created at line 58.
+    Found 4-bit adder for signal <$add0004> created at line 60.
+    Found 4-bit adder for signal <$add0005> created at line 58.
+    Found 4-bit adder for signal <$add0006> created at line 60.
+    Found 5-bit 4-to-1 multiplexer for signal <aux>.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0000> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0001> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0002> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0003> created at line 59.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0004> created at line 57.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0005> created at line 59.
+    Found 4-bit comparator greater for signal <bcd$cmp_gt0006> created at line 57.
+    Found 8-bit register for signal <bin_reg>.
+    Found 20-bit up counter for signal <refresh_counter>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   7 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <xdispDecoder> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "rtl/src/full_adder.v".
+    Found 1-bit xor2 for signal <sum>.
+    Found 1-bit xor2 for signal <out_xor>.
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <div_par>.
+    Related source file is "rtl/src/div_par.v".
+    Found 4-bit register for signal <q>.
+    Found 3-bit down counter for signal <cnt>.
+    Found 8-bit register for signal <Dext>.
+    Found 8-bit subtractor for signal <Dext$addsub0000> created at line 31.
+    Found 8-bit comparator greater for signal <Dext$cmp_gt0000> created at line 28.
+    Found 8-bit comparator lessequal for signal <q_3$cmp_le0000> created at line 28.
+    Found 8-bit shifter logical left for signal <q_3$shift0000> created at line 28.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Combinational logic shifter(s).
+Unit <div_par> synthesized.
+
+
+Synthesizing Unit <convert_Neg_to_Pos>.
+    Related source file is "rtl/src/Convert_Neg_to_Pos_8bits.v".
+    Found 8-bit register for signal <sum>.
+    Found 1-bit register for signal <sign>.
+    Found 1-bit register for signal <complement1_finish>.
+    Found 3-bit up counter for signal <counter>.
+    Found 3-bit comparator less for signal <counter$cmp_lt0000> created at line 129.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <convert_Neg_to_Pos> synthesized.
+
+
+Synthesizing Unit <full_adder_4bits>.
+    Related source file is "rtl/src/full_adder_4bits.v".
+WARNING:Xst:646 - Signal <co> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <sum>.
+    Found 4-bit register for signal <counter>.
+    Found 4-bit adder for signal <counter$addsub0000> created at line 77.
+    Found 4-bit comparator less for signal <counter$cmp_lt0000> created at line 76.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <full_adder_4bits> synthesized.
+
+
+Synthesizing Unit <multiply_8bits_XOR>.
+    Related source file is "rtl/src/multiply_8bits_XOR.v".
+    Found 8-bit register for signal <sum>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <multiply_8bits_XOR> synthesized.
+
+
+Synthesizing Unit <multiply_4bits_XOR>.
+    Related source file is "rtl/src/multiply_4bits_XOR.v".
+WARNING:Xst:647 - Input <b<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sum_aux<3>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <a_xor<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <sum>.
+    Found 1-bit register for signal <complement1_finish>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <multiply_4bits_XOR> synthesized.
+
+
+Synthesizing Unit <division_4bits_XOR>.
+    Related source file is "rtl/src/division_4bits_XOR.v".
+WARNING:Xst:647 - Input <b<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:646 - Signal <a_xor<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <sum>.
+    Found 1-bit register for signal <complement1_finish>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <division_4bits_XOR> synthesized.
+
+
+Synthesizing Unit <full_adder_4bits_XOR>.
+    Related source file is "rtl/src/full_adder_4bits_XOR.v".
+WARNING:Xst:647 - Input <b<3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <sum_aux<3>> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <a_xor<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 4-bit register for signal <sum>.
+    Found 4-bit register for signal <counter>.
+    Found 4-bit adder for signal <counter$addsub0000> created at line 74.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <full_adder_4bits_XOR> synthesized.
+
+
+Synthesizing Unit <complement_to_2>.
+    Related source file is "rtl/src/xcomplement_to_2.v".
+    Found 4-bit register for signal <first_nr>.
+    Found 4-bit register for signal <operation>.
+    Found 4-bit register for signal <second_nr>.
+    Found 1-bit register for signal <complement1_finish>.
+    Found 4-bit register for signal <first_nr_reg>.
+    Found 4-bit register for signal <oper_nr_reg>.
+    Found 4-bit register for signal <second_nr_reg>.
+    Summary:
+	inferred  25 D-type flip-flop(s).
+Unit <complement_to_2> synthesized.
+
+
+Synthesizing Unit <multiply_complement_to_2>.
+    Related source file is "rtl/src/multiply_xcomplement_to_2.v".
+    Found 4-bit register for signal <first_nr>.
+    Found 4-bit register for signal <second_nr>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <multiply_complement_to_2> synthesized.
+
+
+Synthesizing Unit <division_complement_to_2>.
+    Related source file is "rtl/src/division_xcomplement_to_2.v".
+    Found 4-bit register for signal <first_nr>.
+    Found 4-bit register for signal <second_nr>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <division_complement_to_2> synthesized.
+
+
+Synthesizing Unit <multiply_block>.
+    Related source file is "rtl/src/signed_shfit_mult.v".
+WARNING:Xst:653 - Signal <complement_result_sel> is used but never assigned. This sourceless signal will be automatically connected to value 1.
+    Found 8-bit register for signal <c>.
+    Found 8-bit register for signal <aux_sumy_v2>.
+    Found 4-bit comparator greatequal for signal <aux_sumy_v2$cmp_ge0000> created at line 87.
+    Found 8-bit adder for signal <aux_sumy_v2$mux0000>.
+    Found 4-bit register for signal <counter>.
+    Found 4-bit comparator greater for signal <counter$cmp_gt0000> created at line 65.
+    Found 4-bit comparator less for signal <counter$cmp_lt0000> created at line 87.
+    Found 4-bit comparator less for signal <counter$cmp_lt0001> created at line 65.
+    Found 4-bit comparator less for signal <counter$cmp_lt0002> created at line 65.
+    Found 4-bit adder for signal <counter$mux0000>.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   5 Comparator(s).
+Unit <multiply_block> synthesized.
+
+
+Synthesizing Unit <division_block>.
+    Related source file is "rtl/src/signed_shfit_division.v".
+WARNING:Xst:646 - Signal <quociente_XOR<3>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 8-bit register for signal <q>.
+    Found 4-bit up counter for signal <counter>.
+    Found 4-bit register for signal <D_aux>.
+    Found 4-bit register for signal <divider_aux>.
+    Found 1-bit register for signal <start_aux>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  17 D-type flip-flop(s).
+Unit <division_block> synthesized.
+
+
+Synthesizing Unit <xALU>.
+    Related source file is "rtl/src/xALU.v".
+    Found 8-bit register for signal <result_uncoded>.
+    Found 1-bit register for signal <alu_done>.
+    Found 4-bit register for signal <first_nr_reg>.
+    Found 4-bit register for signal <operation_reg>.
+    Found 4-bit register for signal <second_nr_reg>.
+    Summary:
+	inferred  21 D-type flip-flop(s).
+Unit <xALU> synthesized.
+
+
+Synthesizing Unit <xtop>.
+    Related source file is "rtl/src/xtop.v".
+WARNING:Xst:646 - Signal <led0_sel> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+Unit <xtop> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x32-bit single-port RAM                             : 1
+ 512x32-bit dual-port RAM                              : 1
+# Adders/Subtractors                                   : 20
+ 1-bit adder                                           : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 11
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 4
+ 20-bit up counter                                     : 1
+ 3-bit down counter                                    : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 55
+ 1-bit register                                        : 14
+ 3-bit register                                        : 1
+ 32-bit register                                       : 4
+ 4-bit register                                        : 26
+ 8-bit register                                        : 9
+ 9-bit register                                        : 1
+# Comparators                                          : 16
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 8
+ 4-bit comparator less                                 : 4
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 3
+ 5-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 8-bit shifter logical left                            : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 87
+ 1-bit xor2                                            : 86
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <sum_4> in Unit <adder4bits> is equivalent to the following 3 FFs/Latches, which will be removed : <sum_5> <sum_6> <sum_7> 
+INFO:Xst:2261 - The FF/Latch <q_4> in Unit <divide> is equivalent to the following 3 FFs/Latches, which will be removed : <q_5> <q_6> <q_7> 
+WARNING:Xst:1710 - FF/Latch <sum_3> (without init value) has a constant value of 0 in block <multiply_complement_first_nr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sum_3> (without init value) has a constant value of 0 in block <multiply_complement_second_nr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <first_nr_3> (without init value) has a constant value of 0 in block <multiply_comple2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <second_nr_3> (without init value) has a constant value of 0 in block <multiply_comple2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sum_3> (without init value) has a constant value of 0 in block <division_complement_first_nr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <sum_3> (without init value) has a constant value of 0 in block <division_complement_second_nr>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <first_nr_3> (without init value) has a constant value of 0 in block <multiply_comple2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <second_nr_3> (without init value) has a constant value of 0 in block <multiply_comple2>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <sum_3> of sequential type is unconnected in block <result_div>.
+WARNING:Xst:2404 -  FFs/Latches <sum<3:3>> (without init value) have a constant value of 0 in block <multiply_4bits_XOR>.
+WARNING:Xst:2404 -  FFs/Latches <sum<3:3>> (without init value) have a constant value of 0 in block <division_4bits_XOR>.
+
+Synthesizing (advanced) Unit <xram>.
+INFO:Xst:3226 - The RAM <Mram_mem> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out_int> <instruction>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <data_sel>      | high     |
+    |     weA            | connected to signal <data_we>       | high     |
+    |     addrA          | connected to signal <data_addr>     |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to signal <data_out_int>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 512-word x 32-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <pc>            |          |
+    |     doB            | connected to signal <instruction>   |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <xram> synthesized (advanced).
+
+Synthesizing (advanced) Unit <xregf>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_regf> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 32-bit                    |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <_and0000>      | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <data_in>       |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <xregf> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x32-bit single-port distributed RAM                 : 1
+ 512x32-bit dual-port block RAM                        : 1
+# Adders/Subtractors                                   : 20
+ 1-bit adder                                           : 2
+ 32-bit adder                                          : 1
+ 32-bit addsub                                         : 2
+ 32-bit subtractor                                     : 1
+ 4-bit adder                                           : 11
+ 8-bit adder                                           : 1
+ 8-bit subtractor                                      : 1
+ 9-bit adder                                           : 1
+# Counters                                             : 4
+ 20-bit up counter                                     : 1
+ 3-bit down counter                                    : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 261
+ Flip-Flops                                            : 261
+# Comparators                                          : 16
+ 3-bit comparator less                                 : 1
+ 4-bit comparator greatequal                           : 1
+ 4-bit comparator greater                              : 8
+ 4-bit comparator less                                 : 4
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+# Multiplexers                                         : 4
+ 32-bit 4-to-1 multiplexer                             : 3
+ 5-bit 4-to-1 multiplexer                              : 1
+# Logic shifters                                       : 1
+ 8-bit shifter logical left                            : 1
+# Decoders                                             : 1
+ 1-of-4 decoder                                        : 1
+# Xors                                                 : 87
+ 1-bit xor2                                            : 86
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <sum_4> in Unit <full_adder_4bits> is equivalent to the following 3 FFs/Latches, which will be removed : <sum_5> <sum_6> <sum_7> 
+INFO:Xst:2261 - The FF/Latch <q_4> in Unit <division_block> is equivalent to the following 3 FFs/Latches, which will be removed : <q_5> <q_6> <q_7> 
+
+Optimizing unit <xtop> ...
+
+Optimizing unit <xaddr_decoder> ...
+
+Optimizing unit <xctrl> ...
+
+Optimizing unit <xregf> ...
+
+Optimizing unit <xdispDecoder> ...
+
+Optimizing unit <div_par> ...
+
+Optimizing unit <convert_Neg_to_Pos> ...
+
+Optimizing unit <full_adder_4bits> ...
+WARNING:Xst:1710 - FF/Latch <counter_3> (without init value) has a constant value of 0 in block <full_adder_4bits>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <counter_3> (without init value) has a constant value of 0 in block <full_adder_4bits>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <multiply_8bits_XOR> ...
+
+Optimizing unit <multiply_4bits_XOR> ...
+
+Optimizing unit <division_4bits_XOR> ...
+
+Optimizing unit <full_adder_4bits_XOR> ...
+
+Optimizing unit <complement_to_2> ...
+
+Optimizing unit <multiply_complement_to_2> ...
+
+Optimizing unit <division_complement_to_2> ...
+
+Optimizing unit <multiply_block> ...
+
+Optimizing unit <division_block> ...
+
+Optimizing unit <xALU> ...
+WARNING:Xst:1710 - FF/Latch <real_alu/divide/multiply_comple2/second_nr_3> (without init value) has a constant value of 0 in block <xtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <real_alu/divide/multiply_comple2/first_nr_3> (without init value) has a constant value of 0 in block <xtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <real_alu/mult/multiply_comple2/second_nr_3> (without init value) has a constant value of 0 in block <xtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <real_alu/mult/multiply_comple2/first_nr_3> (without init value) has a constant value of 0 in block <xtop>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <real_alu/divide/result_div/complement1_finish> of sequential type is unconnected in block <xtop>.
+WARNING:Xst:1710 - FF/Latch <real_alu/mult/aux_sumy_v2_7> (without init value) has a constant value of 0 in block <xtop>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_first_nr/sum_0> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_first_nr/sum_0> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_first_nr/sum_1> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_first_nr/sum_1> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_first_nr/sum_2> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_first_nr/sum_2> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_second_nr/sum_0> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_second_nr/sum_0> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_first_nr/complement1_finish> in Unit <xtop> is equivalent to the following 3 FFs/Latches, which will be removed : <real_alu/divide/multiply_comple2/division_complement_second_nr/complement1_finish> <real_alu/mult/multiply_comple2/multiply_complement_first_nr/complement1_finish> <real_alu/mult/multiply_comple2/multiply_complement_second_nr/complement1_finish> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_second_nr/sum_1> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_second_nr/sum_1> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/division_complement_second_nr/sum_2> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/multiply_complement_second_nr/sum_2> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/first_nr_1> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/first_nr_1> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/first_nr_2> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/first_nr_2> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/second_nr_0> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/second_nr_0> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/second_nr_1> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/second_nr_1> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/second_nr_2> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/second_nr_2> 
+INFO:Xst:2261 - The FF/Latch <real_alu/divide/multiply_comple2/first_nr_0> in Unit <xtop> is equivalent to the following FF/Latch, which will be removed : <real_alu/mult/multiply_comple2/first_nr_0> 
+Found area constraint ratio of 100 (+ 5) on block xtop, actual ratio is 63.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 263
+ Flip-Flops                                            : 263
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : xtop.ngr
+Top Level Output File Name         : xtop
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 1395
+#      GND                         : 1
+#      INV                         : 36
+#      LUT1                        : 28
+#      LUT2                        : 98
+#      LUT2_L                      : 10
+#      LUT3                        : 162
+#      LUT3_D                      : 13
+#      LUT3_L                      : 6
+#      LUT4                        : 571
+#      LUT4_D                      : 60
+#      LUT4_L                      : 91
+#      MUXCY                       : 143
+#      MUXF5                       : 42
+#      VCC                         : 1
+#      XORCY                       : 133
+# FlipFlops/Latches                : 263
+#      FDC                         : 30
+#      FDCE                        : 136
+#      FDE                         : 49
+#      FDPE                        : 1
+#      FDRE                        : 36
+#      FDRSE                       : 2
+#      FDS                         : 1
+#      FDSE                        : 8
+# RAMS                             : 33
+#      RAM16X1S                    : 32
+#      RAMB16_S36_S36              : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s100ecp132-4 
+
+ Number of Slices:                      583  out of    960    60%  
+ Number of Slice Flip Flops:            263  out of   1920    13%  
+ Number of 4 input LUTs:               1107  out of   1920    57%  
+    Number used as logic:              1075
+    Number used as RAMs:                 32
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of     83    30%  
+ Number of BRAMs:                         1  out of      4    25%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 296   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+rst                                | IBUF                   | 167   |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 24.177ns (Maximum Frequency: 41.362MHz)
+   Minimum input arrival time before clock: 15.300ns
+   Maximum output required time after clock: 18.515ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 24.177ns (frequency: 41.362MHz)
+  Total number of paths / destination ports: 12612424 / 745
+-------------------------------------------------------------------------
+Delay:               24.177ns (Levels of Logic = 45)
+  Source:            ram/Mram_mem (RAM)
+  Destination:       controller/regC_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: ram/Mram_mem to controller/regC_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S36_S36:CLKB->DOB28   90   2.800   1.456  ram/Mram_mem (instruction<28>)
+     LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
+     LUT3_L:I2->LO         1   0.704   0.135  controller/mem_addr<8>1_SW0 (N237)
+     LUT3:I2->O           15   0.704   1.021  controller/mem_addr<8>1 (data_addr<8>)
+     LUT4:I3->O            3   0.704   0.535  controller/mem_sel17 (controller/mem_sel17)
+     LUT4_D:I3->O          9   0.704   0.824  controller/mem_sel119_1 (controller/mem_sel119)
+     LUT4_D:I3->O         38   0.704   1.268  controller/mem_sel (data_sel)
+     LUT4:I3->O            1   0.704   0.420  controller/operand<0>12 (controller/operand<0>12)
+     MUXF5:S->O            1   0.739   0.455  controller/operand<0>170_SW0 (N196)
+     LUT4:I2->O            4   0.704   0.622  controller/operand<0>210 (controller/operand<0>)
+     LUT3:I2->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<0> (controller/Maddsub_carry_res_n_1_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<0> (controller/Maddsub_carry_res_n_1_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<1> (controller/Maddsub_carry_res_n_1_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<3> (controller/Maddsub_carry_res_n_1_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<4> (controller/Maddsub_carry_res_n_1_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<5> (controller/Maddsub_carry_res_n_1_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<6> (controller/Maddsub_carry_res_n_1_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<7> (controller/Maddsub_carry_res_n_1_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<8> (controller/Maddsub_carry_res_n_1_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<9> (controller/Maddsub_carry_res_n_1_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<10> (controller/Maddsub_carry_res_n_1_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<11> (controller/Maddsub_carry_res_n_1_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<12> (controller/Maddsub_carry_res_n_1_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<13> (controller/Maddsub_carry_res_n_1_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<14> (controller/Maddsub_carry_res_n_1_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<15> (controller/Maddsub_carry_res_n_1_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<16> (controller/Maddsub_carry_res_n_1_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<17> (controller/Maddsub_carry_res_n_1_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<18> (controller/Maddsub_carry_res_n_1_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<19> (controller/Maddsub_carry_res_n_1_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<20> (controller/Maddsub_carry_res_n_1_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<21> (controller/Maddsub_carry_res_n_1_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<22> (controller/Maddsub_carry_res_n_1_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<23> (controller/Maddsub_carry_res_n_1_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<24> (controller/Maddsub_carry_res_n_1_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<25> (controller/Maddsub_carry_res_n_1_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<26> (controller/Maddsub_carry_res_n_1_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<27> (controller/Maddsub_carry_res_n_1_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<28> (controller/Maddsub_carry_res_n_1_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<29> (controller/Maddsub_carry_res_n_1_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  controller/Maddsub_carry_res_n_1_xor<30> (controller/carry_res_n_1<30>)
+     LUT2:I1->O            1   0.704   0.000  controller/Maddsub_adder_res_lut<30> (controller/Maddsub_adder_res_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  controller/Maddsub_adder_res_cy<30> (controller/Maddsub_adder_res_cy<30>)
+     XORCY:CI->O           2   0.804   0.482  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
+     LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
+     FDCE:D                    0.308          controller/regC_2
+    ----------------------------------------
+    Total                     24.177ns (15.838ns logic, 8.339ns route)
+                                       (65.5% logic, 34.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 10377 / 96
+-------------------------------------------------------------------------
+Offset:              15.300ns (Levels of Logic = 42)
+  Source:            Btn3 (PAD)
+  Destination:       controller/regC_2 (FF)
+  Destination Clock: clk rising
+
+  Data Path: Btn3 to controller/regC_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.595  Btn3_IBUF (Btn3_IBUF)
+     LUT4:I0->O            1   0.704   0.499  addr_decoder/btn3_sel_SW1 (N255)
+     LUT4_L:I1->LO         1   0.704   0.179  addr_decoder/led0_sel11_SW5_SW0 (N412)
+     LUT4:I1->O            1   0.704   0.595  controller/operand<0>17 (controller/operand<0>17)
+     LUT4:I0->O            1   0.704   0.424  controller/operand<0>124 (controller/operand<0>124)
+     LUT4:I3->O            4   0.704   0.622  controller/operand<0>210 (controller/operand<0>)
+     LUT3:I2->O            1   0.704   0.000  controller/Maddsub_carry_res_n_1_lut<0> (controller/Maddsub_carry_res_n_1_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  controller/Maddsub_carry_res_n_1_cy<0> (controller/Maddsub_carry_res_n_1_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<1> (controller/Maddsub_carry_res_n_1_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<2> (controller/Maddsub_carry_res_n_1_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<3> (controller/Maddsub_carry_res_n_1_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<4> (controller/Maddsub_carry_res_n_1_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<5> (controller/Maddsub_carry_res_n_1_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<6> (controller/Maddsub_carry_res_n_1_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<7> (controller/Maddsub_carry_res_n_1_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<8> (controller/Maddsub_carry_res_n_1_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<9> (controller/Maddsub_carry_res_n_1_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<10> (controller/Maddsub_carry_res_n_1_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<11> (controller/Maddsub_carry_res_n_1_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<12> (controller/Maddsub_carry_res_n_1_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<13> (controller/Maddsub_carry_res_n_1_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<14> (controller/Maddsub_carry_res_n_1_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<15> (controller/Maddsub_carry_res_n_1_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<16> (controller/Maddsub_carry_res_n_1_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<17> (controller/Maddsub_carry_res_n_1_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<18> (controller/Maddsub_carry_res_n_1_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<19> (controller/Maddsub_carry_res_n_1_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<20> (controller/Maddsub_carry_res_n_1_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<21> (controller/Maddsub_carry_res_n_1_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<22> (controller/Maddsub_carry_res_n_1_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<23> (controller/Maddsub_carry_res_n_1_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<24> (controller/Maddsub_carry_res_n_1_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<25> (controller/Maddsub_carry_res_n_1_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<26> (controller/Maddsub_carry_res_n_1_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<27> (controller/Maddsub_carry_res_n_1_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<28> (controller/Maddsub_carry_res_n_1_cy<28>)
+     MUXCY:CI->O           1   0.059   0.000  controller/Maddsub_carry_res_n_1_cy<29> (controller/Maddsub_carry_res_n_1_cy<29>)
+     XORCY:CI->O           1   0.804   0.499  controller/Maddsub_carry_res_n_1_xor<30> (controller/carry_res_n_1<30>)
+     LUT2:I1->O            1   0.704   0.000  controller/Maddsub_adder_res_lut<30> (controller/Maddsub_adder_res_lut<30>)
+     MUXCY:S->O            0   0.464   0.000  controller/Maddsub_adder_res_cy<30> (controller/Maddsub_adder_res_cy<30>)
+     XORCY:CI->O           2   0.804   0.482  controller/Maddsub_adder_res_xor<31> (controller/adder_res<31>)
+     LUT3:I2->O            1   0.704   0.000  controller/alu_negative31 (controller/alu_negative)
+     FDCE:D                    0.308          controller/regC_2
+    ----------------------------------------
+    Total                     15.300ns (11.405ns logic, 3.895ns route)
+                                       (74.5% logic, 25.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12727 / 12
+-------------------------------------------------------------------------
+Offset:              18.515ns (Levels of Logic = 9)
+  Source:            ram/Mram_mem (RAM)
+  Destination:       trap (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ram/Mram_mem to trap
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16_S36_S36:CLKB->DOB28   90   2.800   1.456  ram/Mram_mem (instruction<28>)
+     LUT4_D:I0->O          4   0.704   0.622  controller/imm_cmp_eq00001_1 (controller/imm_cmp_eq00001)
+     LUT3_L:I2->LO         1   0.704   0.135  controller/mem_addr<8>1_SW0 (N237)
+     LUT3:I2->O           15   0.704   1.021  controller/mem_addr<8>1 (data_addr<8>)
+     LUT4:I3->O            3   0.704   0.535  controller/mem_sel17 (controller/mem_sel17)
+     LUT4_D:I3->O          9   0.704   0.824  controller/mem_sel119_1 (controller/mem_sel119)
+     LUT4_D:I3->O         38   0.704   1.343  controller/mem_sel (data_sel)
+     LUT4:I1->O            1   0.704   0.455  addr_decoder/trap_sel91_SW0 (N609)
+     LUT4:I2->O            1   0.704   0.420  addr_decoder/trap_sel91 (trap_OBUF)
+     OBUF:I->O                 3.272          trap_OBUF (trap)
+    ----------------------------------------
+    Total                     18.515ns (11.704ns logic, 6.811ns route)
+                                       (63.2% logic, 36.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 17.01 secs
+ 
+--> 
+
+
+Total memory usage is 556352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   31 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
+

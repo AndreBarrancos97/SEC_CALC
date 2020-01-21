@@ -8,6 +8,7 @@
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/xtop |home|andre|Documents|SEC_CALC|testes|V2_Project_Calc_WorkingInThis|rtl|src|xtop.v/complement1 - complement_to_2</ClosedNode>
+         <ClosedNode>/xtop |home|andre|Documents|SEC_CALC|testes|V2_Project_Calc_WorkingInThis|rtl|src|xtop.v/convert_final_result - convert_Neg_to_Pos</ClosedNode>
          <ClosedNode>/xtop |home|andre|Documents|SEC_CALC|testes|V2_Project_Calc_WorkingInThis|rtl|src|xtop.v/real_alu - xALU</ClosedNode>
          <ClosedNode>/xtop |home|andre|Documents|SEC_CALC|testes|V2_Project_Calc|rtl|src|xtop.v/complement1 - complement_to_2</ClosedNode>
          <ClosedNode>/xtop |home|andre|Documents|SEC_CALC|testes|V2_Project_Calc|rtl|src|xtop.v/real_alu - xALU</ClosedNode>
@@ -18,9 +19,9 @@
       <SelectedItems>
          <SelectedItem>xtop (/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xtop.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >7</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >5</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000003d9000000020000000000000000000000000200000064ffffffff000000810000000300000002000003d90000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000002020000000100000001000000640000043e000000020000000000000000000000000200000064ffffffff0000008100000003000000020000043e0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
       <CurrentItem>xtop (/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xtop.v)</CurrentItem>
    </ItemView>
@@ -67,18 +68,23 @@
          <ClosedNode>Configure Target Device</ClosedNode>
          <ClosedNode>Design Utilities</ClosedNode>
          <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>Implement Design/Map</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Back-annotate Pin Locations</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate IBIS Model</ClosedNode>
+         <ClosedNode>Implement Design/Place &amp; Route/Generate Post-Place &amp; Route Static Timing</ClosedNode>
+         <ClosedNode>Implement Design/Translate</ClosedNode>
          <ClosedNode>Synthesize - XST</ClosedNode>
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Synthesize - XST</SelectedItem>
+         <SelectedItem>Configure Target Device</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >3</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000117000000010000000100000000000000000000000064ffffffff000000810000000000000001000001170000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Synthesize - XST</CurrentItem>
+      <CurrentItem>Configure Target Device</CurrentItem>
    </ItemView>
-   <SourceProcessView>000000ff00000000000000020000014c0000011d01000000060100000002</SourceProcessView>
+   <SourceProcessView>000000ff0000000000000002000000e80000006d01000000060100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
 </Project>
