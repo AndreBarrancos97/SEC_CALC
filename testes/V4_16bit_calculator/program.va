@@ -1,0 +1,47 @@
+begin1    rdw BTN3_BASE
+    	  beqi begin1
+          nop
+	  rdw SW_BASE
+	  wrw R0
+begin2    rdw BTN2_BASE
+    	  beqi begin2
+	  nop
+          rdw SW2_BASE
+	  wrw R1
+	  rdw R0
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  xor R1
+	  wrw R0
+begin3    rdw BTN1_BASE
+    	  beqi begin3
+	  nop
+          rdw SW3_BASE
+	  wrw R1
+	  rdw R0
+	  shft -1
+	  shft -1
+	  shft -1
+	  shft -1
+	  xor R1
+	  wrw COMPLEMENT2_BASE
+begin4    rdw ALU_BASE
+    	  beqi begin4
+	  nop
+	  wrw  ALU_BASE
+begin5    rdw  CONVERT_BASE
+    	  beqi begin5
+	  nop
+	  wrw  CONVERT_BASE
+begin6    rdw  DISPLAY_BASE
+    	  beqi begin6
+	  nop
+	  wrw  DISPLAY_BASE
+end beqi end
+    nop

@@ -8,5 +8,102 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/include/xdefs.vh&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/Convert_Neg_to_Pos_8bits.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/div_par.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/division_4bits_XOR.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/division_xcomplement_to_2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/full_adder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/full_adder_4bits.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/full_adder_4bits_XOR.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/multiply_4bits_XOR.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/multiply_8bits_XOR.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/multiply_xcomplement_to_2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/signed_shfit_division.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/signed_shfit_mult.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xALU.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xaddr_decoder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xaddr_decoder.v</arg>&quot; Line <arg fmt="%d" index="2">1</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xaddr_decoder.v&quot; line 1
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xcomplement_to_2.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xcprint.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xcprint.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xcprint.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xctrl.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xctrl.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xctrl.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xdispDecoder.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xled.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xled.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xled.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xram.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xram.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xram.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xregf.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xregf.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xregf.v&quot; line 2
+</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xtop.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1065" >&quot;<arg fmt="%s" index="1">/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xtop.v</arg>&quot; Line <arg fmt="%d" index="2">2</arg>. <arg fmt="%s" index="3">Include file found: &apos;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/xdefs.vh&apos; in file &quot;/home/andre/Documents/SEC_CALC/testes/V2_Project_Calc_WorkingInThis/rtl/src/xtop.v&quot; line 2
+</arg>
+</msg>
+
 </messages>
 
