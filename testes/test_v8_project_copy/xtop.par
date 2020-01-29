@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-andre-Lenovo-ideapad-310-15ISK::  Tue Jan 21 14:35:05 2020
+andre-Lenovo-ideapad-310-15ISK::  Tue Jan 28 13:57:04 2020
 
 par -w -intstyle ise -ol high -t 1 xtop_map.ncd xtop.ncd xtop.pcf 
 
@@ -184,8 +184,8 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 26 secs 
-Total CPU time to PAR completion: 26 secs 
+Total REAL time to PAR completion: 25 secs 
+Total CPU time to PAR completion: 25 secs 
 
 Peak Memory Usage:  573 MB
 

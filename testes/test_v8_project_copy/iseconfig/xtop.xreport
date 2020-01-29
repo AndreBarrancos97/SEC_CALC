@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2020-01-21T14:33:08</DateModified>
+  <DateModified>2020-01-28T13:56:32</DateModified>
   <ModuleName>xtop</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/andre/Documents/SEC_CALC/testes/test_v8_project_copy/iseconfig/xtop.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/andre/Documents/SEC_CALC/testes/test_v8_project_copy</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/andre/Documents/SEC_CALC/testes/test_v8_project_copy/</ImplementationReportsDirectory>
   <DateInitialized>2020-01-21T14:33:08</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

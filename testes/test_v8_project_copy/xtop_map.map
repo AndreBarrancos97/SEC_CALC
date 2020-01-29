@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -4
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Tue Jan 21 14:35:00 2020
+Mapped Date    : Tue Jan 28 13:56:59 2020
 
 Mapping design into LUTs...
 Running directed packing...
